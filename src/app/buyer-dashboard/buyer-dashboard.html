@@ -1,0 +1,139 @@
+<div class="buyer-dashboard-wrapper">
+  <!-- Top Navbar -->
+  <nav class="dashboard-navbar">
+    <span class="logo">
+      <svg class="cart-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7 18C6.44772 18 6 18.4477 6 19C6 19.5523 6.44772 20 7 20C7.55228 20 8 19.5523 8 19C8 18.4477 7.55228 18 7 18Z" fill="white"/>
+        <path d="M17 18C16.4477 18 16 18.4477 16 19C16 19.5523 16.4477 20 17 20C17.5523 20 18 19.5523 18 19C18 18.4477 17.5523 18 17 18Z" fill="white"/>
+        <path d="M3 4H5L6.68 15.39C6.7716 16.0282 7.31213 16.5 7.96 16.5H19.5C20.0523 16.5 20.5 16.0523 20.5 15.5C20.5 14.9477 20.0523 14.5 19.5 14.5H8.42L8.28 13.5H19.5C19.8978 13.5 20.2794 13.342 20.5607 13.0607C20.842 12.7794 21 12.3978 21 12V6.5C21 5.94772 20.5523 5.5 20 5.5H6.21L5.27 2.5H3V4Z" fill="white"/>
+      </svg>
+      Local Ease
+    </span>
+    <input class="search-bar" type="text" placeholder="Search vendors, products, orders..." />
+    <div class="navbar-actions">
+      <button class="nav-btn">My Orders</button>
+      <button class="nav-btn nav-btn-primary">My Account</button>
+    </div>
+  </nav>
+
+  <div class="dashboard-main">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <ul>
+        <li class="active">Dashboard</li>
+        <li>Nearby Vendors</li>
+        <li>Deals</li>
+        <li>Top Rated</li>
+        <li>Recent Orders</li>
+        <li>Favorites</li>
+        <li>Settings</li>
+        <li>Help & Support</li>
+        <li>Logout</li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <section class="dashboard-content">
+      <div class="dashboard-row">
+        <div class="card active-orders">
+          <h4>Active Orders</h4>
+          <div class="order-item">
+            <span>Order #823765</span>
+            <span class="order-status">Track</span>
+          </div>
+          <div class="order-item">
+            <span>Order #823766</span>
+            <span class="order-status">Track</span>
+          </div>
+        </div>
+        <div class="card shopping-cart">
+          <h4>Shopping Cart</h4>
+          <div class="cart-item">
+            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=40&q=80" alt="Organic" />
+            <span>Organic</span>
+            <span class="cart-price">$9.8</span>
+          </div>
+          <div class="cart-total">
+            <span>Total:</span>
+            <span>$43.2</span>
+          </div>
+          <button class="main-btn">Proceed</button>
+        </div>
+        <div class="card recent-feedback">
+          <h4>Recent Feedback</h4>
+          <div class="feedback-item">
+            <span>Artisan Bakery</span>
+            <span class="feedback-rating">4.8 ★</span>
+            <span class="feedback-comment">"Great bread and fast delivery!"</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="dashboard-row">
+        <div class="card vendors-map">
+          <h4>Nearby Vendors</h4>
+          <img class="map-img" src="https://maps.googleapis.com/maps/api/staticmap?center=New+York,NY&zoom=13&size=300x120&key=YOUR_API_KEY" alt="Vendors Map" />
+          <div class="vendor-list">
+            <div class="vendor-item">
+              <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=40&q=80" alt="Market" />
+              <span>Fresh Market</span>
+              <button class="main-btn main-btn-outline">View Products</button>
+            </div>
+            <div class="vendor-item">
+              <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=40&q=80" alt="Bakery" />
+              <span>Artisan Bakery</span>
+              <button class="main-btn main-btn-outline">View Products</button>
+            </div>
+          </div>
+        </div>
+        <div class="card order-history">
+          <h4>Order History</h4>
+          <div class="order-history-item">
+            <span>Order #823761</span>
+            <span>$27.35</span>
+            <span>May 12, 2024</span>
+          </div>
+          <div class="order-history-item">
+            <span>Order #823762</span>
+            <span>$18.75</span>
+            <span>May 10, 2024</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="dashboard-row">
+        <div class="card featured-products">
+          <h4>Featured Products</h4>
+          <div class="product-list">
+            <div class="product-item">
+              <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=60&q=80" alt="Tomatoes" />
+              <span>Tomatoes</span>
+              <span class="product-price">$4.99</span>
+            </div>
+            <div class="product-item">
+              <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=60&q=80" alt="Steak" />
+              <span>Ribeye Steak</span>
+              <span class="product-price">$19.99</span>
+            </div>
+            <div class="product-item">
+              <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=60&q=80" alt="Kale" />
+              <span>Organic Kale</span>
+              <span class="product-price">$3.49</span>
+            </div>
+          </div>
+        </div>
+        <div class="card manage-orders">
+          <h4>Manage Orders</h4>
+          <div class="manage-order-item">
+            <span>Order #823765</span>
+            <button class="main-btn main-btn-outline">Track Order</button>
+          </div>
+          <div class="manage-order-item">
+            <span>Order #823766</span>
+            <button class="main-btn main-btn-outline">Cancel Order</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

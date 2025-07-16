@@ -1,0 +1,83 @@
+<div class="order-tracking-wrapper">
+  <!-- Top Navbar -->
+  <nav class="dashboard-navbar">
+    <span class="logo">
+      <svg class="cart-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7 18C6.44772 18 6 18.4477 6 19C6 19.5523 6.44772 20 7 20C7.55228 20 8 19.5523 8 19C8 18.4477 7.55228 18 7 18Z" fill="white"/>
+        <path d="M17 18C16.4477 18 16 18.4477 16 19C16 19.5523 16.4477 20 17 20C17.5523 20 18 19.5523 18 19C18 18.4477 17.5523 18 17 18Z" fill="white"/>
+        <path d="M3 4H5L6.68 15.39C6.7716 16.0282 7.31213 16.5 7.96 16.5H19.5C20.0523 16.5 20.5 16.0523 20.5 15.5C20.5 14.9477 20.0523 14.5 19.5 14.5H8.42L8.28 13.5H19.5C19.8978 13.5 20.2794 13.342 20.5607 13.0607C20.842 12.7794 21 12.3978 21 12V6.5C21 5.94772 20.5523 5.5 20 5.5H6.21L5.27 2.5H3V4Z" fill="white"/>
+      </svg>
+      Local Ease
+    </span>
+    <input class="search-bar" type="text" placeholder="Search vendors, products, orders..." />
+    <div class="navbar-actions">
+      <button class="nav-btn">My Orders</button>
+      <button class="nav-btn nav-btn-primary">My Account</button>
+    </div>
+  </nav>
+
+  <div class="dashboard-main">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <ul>
+        <li class="active">Dashboard</li>
+        <li>Nearby Vendors</li>
+        <li>Deals</li>
+        <li>Top Rated</li>
+        <li>Recent Orders</li>
+        <li>Favorites</li>
+        <li>Settings</li>
+        <li>Help & Support</li>
+        <li>Logout</li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <section class="order-tracking-content">
+      <div class="order-tracking-row">
+        <div class="card map-section">
+          <h4>Track Your Order</h4>
+          <img class="map-img" src="https://maps.googleapis.com/maps/api/staticmap?center=New+York,NY&zoom=14&size=400x180&key=YOUR_API_KEY" alt="Order Map" />
+          <div class="delivery-progress">
+            <h5>Delivery Progress</h5>
+            <ul>
+              <li class="done">Confirmed</li>
+              <li class="done">Packed</li>
+              <li class="active">Out for Delivery</li>
+              <li>Delivered</li>
+            </ul>
+            <div class="delivery-time">Estimated delivery: Today, 2:45 PM</div>
+          </div>
+        </div>
+        <div class="card order-summary-section">
+          <h4>Order Details</h4>
+          <div class="order-details">
+            <div><b>Order #</b> 8177605</div>
+            <div><b>Placed:</b> May 21, 2024, 1:05 PM</div>
+            <div><b>Delivery Address:</b> 123 Main Street, NY</div>
+            <div><b>Buyer:</b> Michael</div>
+          </div>
+          <h5>Order Summary</h5>
+          <ul class="order-items">
+            <li><span>Whole Grain Bread</span><span>$4.5</span></li>
+            <li><span>Fresh Eggs</span><span>$3.2</span></li>
+            <li><span>Organic Kale</span><span>$2.9</span></li>
+            <li><span>Ribeye Steak</span><span>$18.0</span></li>
+          </ul>
+          <div class="order-total">
+            <span>Total</span>
+            <span>$28.6</span>
+          </div>
+          <div class="contact-delivery">
+            <h5>Contact Delivery Person</h5>
+            <div class="contact-actions">
+              <button class="main-btn">Call</button>
+              <button class="main-btn main-btn-outline">Message</button>
+            </div>
+            <input class="message-input" type="text" placeholder="Type a custom message..." />
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

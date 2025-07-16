@@ -1,0 +1,110 @@
+<div class="admin-dashboard-wrapper">
+  <!-- Top Navbar -->
+  <nav class="dashboard-navbar">
+    <span class="logo">
+      <svg class="cart-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7 18C6.44772 18 6 18.4477 6 19C6 19.5523 6.44772 20 7 20C7.55228 20 8 19.5523 8 19C8 18.4477 7.55228 18 7 18Z" fill="white"/>
+        <path d="M17 18C16.4477 18 16 18.4477 16 19C16 19.5523 16.4477 20 17 20C17.5523 20 18 19.5523 18 19C18 18.4477 17.5523 18 17 18Z" fill="white"/>
+        <path d="M3 4H5L6.68 15.39C6.7716 16.0282 7.31213 16.5 7.96 16.5H19.5C20.0523 16.5 20.5 16.0523 20.5 15.5C20.5 14.9477 20.0523 14.5 19.5 14.5H8.42L8.28 13.5H19.5C19.8978 13.5 20.2794 13.342 20.5607 13.0607C20.842 12.7794 21 12.3978 21 12V6.5C21 5.94772 20.5523 5.5 20 5.5H6.21L5.27 2.5H3V4Z" fill="white"/>
+      </svg>
+      Local Ease
+    </span>
+    <input class="search-bar" type="text" placeholder="Search vendors, users, or orders..." />
+    <div class="navbar-actions">
+      <button class="nav-btn">Admin</button>
+      <img class="admin-avatar" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Admin" />
+    </div>
+  </nav>
+
+  <div class="dashboard-main">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <ul>
+        <li class="active">Dashboard</li>
+        <li>User Management</li>
+        <li>Vendor Management</li>
+        <li>Order Management</li>
+        <li>Analytics</li>
+        <li>Campaigns</li>
+        <li>Settings</li>
+        <li>Help & Support</li>
+        <li>Logout</li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <section class="dashboard-content">
+      <div class="dashboard-row stats-row">
+        <div class="stat-card">
+          <div class="stat-title">Total Revenue</div>
+          <div class="stat-value">$24,589.32</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-title">Active Users</div>
+          <div class="stat-value">8,342</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-title">Active Vendors</div>
+          <div class="stat-value">1,247</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-title">Pending Approvals</div>
+          <div class="stat-value">12</div>
+        </div>
+      </div>
+
+      <div class="dashboard-row charts-row">
+        <div class="card revenue-overview">
+          <h4>Revenue Overview</h4>
+          <div class="revenue-tabs">
+            <button class="tab-btn active">Monthly</button>
+            <button class="tab-btn">Weekly</button>
+          </div>
+          <div class="revenue-chart">
+            <!-- Placeholder for chart -->
+            <div class="chart-placeholder">[Line Chart]</div>
+          </div>
+        </div>
+        <div class="card user-utilization">
+          <h4>User Utilization</h4>
+          <div class="pie-chart-placeholder">[Pie Chart]</div>
+        </div>
+      </div>
+
+      <div class="dashboard-row vendor-registrations-row">
+        <div class="card vendor-registrations">
+          <h4>Recent Vendor Registrations</h4>
+          <div class="vendor-list">
+            <div class="vendor-item">
+              <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Vendor" />
+              <span>Fresh Farm</span>
+              <span class="vendor-time">2 hours ago</span>
+              <button class="main-btn main-btn-outline">Approve</button>
+            </div>
+            <div class="vendor-item">
+              <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Vendor" />
+              <span>Urban Organics</span>
+              <span class="vendor-time">5 hours ago</span>
+              <button class="main-btn main-btn-outline">Approve</button>
+            </div>
+            <div class="vendor-item">
+              <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Vendor" />
+              <span>Artisan Bakery</span>
+              <span class="vendor-time">8 hours ago</span>
+              <button class="main-btn main-btn-outline">Approve</button>
+            </div>
+          </div>
+        </div>
+        <div class="card recent-activity">
+          <h4>Recent Activity</h4>
+          <ul class="activity-list">
+            <li>Vendor <b>Fresh Farm</b> approved</li>
+            <li>Order #823761 delivered</li>
+            <li>User <b>Michael</b> registered</li>
+            <li>Vendor <b>Urban Organics</b> pending approval</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

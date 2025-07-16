@@ -18,36 +18,31 @@
       <button [class.selected]="selectedRole === 'vendor'" (click)="setRole('vendor')">Vendor</button>
       <!-- <button *ngIf="activeTab === 'signin'" [class.selected]="selectedRole === 'admin'" (click)="setRole('admin')">Admin</button> -->
     </div>
-    <form>
-      <div *ngIf="activeTab == 'signup'" class="input-group">
-        <label>Full Name</label>
-        <input type="name" placeholder="Enter Your Full Name" required />
-      </div>
-      <div class="input-group">
-        <label>Email Address</label>
-        <input type="email" placeholder="your@email.com" required />
-      </div>
-      <div class="input-group">
-        <label>Password</label>
-        <input type="password" placeholder="********" required />
-      </div>
-      <div  *ngIf="activeTab == 'signup'"  class="input-group">
-        <label>Confirm Password</label>
-        <input type="password" placeholder="Confirm password" required />
-      </div>
-      <div class="forgot-signup-row" *ngIf="activeTab === 'signin'">
-        <a class="forgot" href="#">Forgot password?</a>
-      </div>
-      <button class="main-btn" type="submit">{{ activeTab === 'signin' ? 'Sign In' : 'Sign Up' }}</button>
-      <div class="signup-row" *ngIf="activeTab == 'signin'">
-        <span>Don't have an account?</span>
-        <a class="signup-link" href="#" (click)="$event.preventDefault(); setTab('signup')">Sign up</a>
-      </div>
-      <div class="signup-row" *ngIf="activeTab == 'signup'">
-        <span>Already have an account?</span>
-        <a class="signup-link" href="#" (click)="$event.preventDefault(); setTab('signin')">Sign in</a>
-      </div>
-    </form>
+    <form (ngSubmit)="handleSubmit()">
+  <div *ngIf="activeTab == 'signup'" class="input-group">
+    <label>Full Name</label>
+    <input type="text" placeholder="Enter Your Full Name" [(ngModel)]="name" name="name" required />
+  </div>
+  <div class="input-group">
+    <label>Email Address</label>
+    <input type="email" placeholder="your@email.com" [(ngModel)]="email" name="email" required />
+  </div>
+  <div  *ngIf="activeTab == 'signup'" class="input-group">
+    <label>Mobile Number</label>
+    <input type="number" placeholder="Enter Your Mobile Number" [(ngModel)]="number" name="number" required />
+  </div>
+  <div class="input-group">
+    <label>Password</label>
+    <input type="password" placeholder="********" [(ngModel)]="password" name="password" required />
+  </div>
+  <div *ngIf="activeTab == 'signup'" class="input-group">
+    <label>Confirm Password</label>
+    <input type="password" placeholder="Confirm password" [(ngModel)]="confirmPassword" name="confirmPassword" required />
+  </div>
+  <!-- submit button -->
+  <button class="main-btn" type="submit">{{ activeTab === 'signin' ? 'Sign In' : 'Sign Up' }}</button>
+</form>
+
     <div class="terms-row">
       <span *ngIf="activeTab == 'signin'">By signing in, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></span>
       <span *ngIf="activeTab == 'signup'">By signing up, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></span>

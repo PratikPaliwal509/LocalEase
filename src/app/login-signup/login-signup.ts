@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
+  standalone: true,
   selector: 'app-login-signup',
-  imports: [],
   templateUrl: './login-signup.html',
-  styleUrl: './login-signup.css'
+  styleUrls: ['./login-signup.css'],
+  imports: [CommonModule]
 })
 export class LoginSignup {
   activeTab: 'signin' | 'signup' = 'signin';
@@ -12,6 +14,7 @@ export class LoginSignup {
 
   setTab(tab: 'signin' | 'signup') {
     this.activeTab = tab;
+    console.log('Tab switched to:', this.activeTab);
   }
 
   setRole(role: 'buyer' | 'vendor' | 'admin') {

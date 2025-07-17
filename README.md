@@ -1,10 +1,22 @@
+
+
 # MyAngularApp
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.0.
 
-## Development server
+## Project Structure
 
-To start a local development server, run:
+This repository contains both the **frontend** (Angular app) and the **backend** (Node.js/Express or similar) directories.
+
+---
+
+## 🚀 Getting Started
+
+### 🖥️ Frontend (Angular)
+
+#### Development server
+
+To start the Angular development server, run:
 
 ```bash
 ng serve
@@ -12,9 +24,9 @@ ng serve
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
+#### Code scaffolding
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+To generate a new component, use:
 
 ```bash
 ng generate component component-name
@@ -26,9 +38,9 @@ For a complete list of available schematics (such as `components`, `directives`,
 ng generate --help
 ```
 
-## Building
+#### Building the frontend
 
-To build the project run:
+To build the Angular project, run:
 
 ```bash
 ng build
@@ -36,24 +48,52 @@ ng build
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+#### Running unit tests
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+#### Running end-to-end tests
 
 ```bash
 ng e2e
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+> Note: Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
-## Additional Resources
+---
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### 🛠️ Backend Setup
+
+1. Navigate to the backend directory:
+
+```bash
+cd backend
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Start the backend server in development mode:
+
+```bash
+npm run dev
+```
+
+> Make sure your backend is running on a separate port (e.g., `http://localhost:5000`) and configure CORS properly if needed.
+
+---
+
+## 📚 Additional Resources
+
+* [Angular CLI Documentation](https://angular.dev/tools/cli)
+* [Node.js Documentation](https://nodejs.org/)
+* [Express.js Documentation](https://expressjs.com/)
+
+---
+
+Let me know if you'd like to split the README into separate frontend/backend `README.md` files or add `.env` setup instructions too.

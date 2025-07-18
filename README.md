@@ -19,6 +19,7 @@ This repository contains both the **frontend** (Angular app) and the **backend**
 To start the Angular development server, run:
 
 ```bash
+cd frontend
 ng serve
 ```
 

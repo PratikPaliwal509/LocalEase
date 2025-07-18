@@ -23,7 +23,7 @@
   <!-- Hero Section -->
   <section class="hero">
     <h1>Connecting Local Businesses with Customers</h1>
-    <p>Local Ease makes it easy to discover, connect, and support local vendors in your neighborhood.</p>
+    <p>Local Ease makes it easy to discover, connect, and support local vendors in your <br/>neighborhood community - all from one convinient platform.</p>
     <div class="hero-cta">
       <button class="main-btn" routerLink="/buyer-dashboard">For Buyers</button>
       <button class="main-btn main-btn-outline" routerLink="/vendor-dashboard">For Vendors</button>
@@ -32,17 +32,26 @@
 
   <!-- Features Section -->
   <section class="features">
-    <div class="feature-card">
+    <div class= "feature-card">
+      <div class="icon-wrapper">
+      <i class="bi bi-search"></i>
+    </div>
       <h3>Discover Local Vendors</h3>
-      <p>Find trusted vendors and fresh products near you.</p>
+      <p>Browse through a cureted selection of local businesses & artisans in your area. </p>
     </div>
     <div class="feature-card">
+      <div class="icon-wrapper">
+        <i class="bi bi-bag-fill fs-1"></i>
+      </div>
       <h3>Easy Ordering</h3>
-      <p>Place orders with just a few clicks. Local Ease streamlines your shopping experience.</p>
+      <p>Place orders with just a few clicks. Customize your selections, special instructions, and choose pickup or delivery options that work for you.</p>
     </div>
     <div class="feature-card">
+      <div class="icon-wrapper">
+        <i class="bi bi-truck fs-1"></i>
+      </div>
       <h3>Real-Time Tracking</h3>
-      <p>Track your orders and deliveries in real time for peace of mind.</p>
+      <p>Follow your order from preparation to delivery with our real-time tracking system. get notifications at every step of the fullfillment process</p>
     </div>
   </section>
 
@@ -51,8 +60,23 @@
     <div class="dashboard-info">
       <h2>Personalized Dashboards</h2>
       <p>Whether you're a buyer or a vendor, Local Ease provides dashboards tailored to your needs.</p>
+      <div class="feature-points">
+        <div class="feature-point">
+          <i class="bi bi-check-circle-fill"></i>
+          <p>Secure access and intuitive user interface</p>
+        </div>
+        <div class="feature-point">
+          <i class="bi bi-check-circle-fill"></i>
+          <p>Real-time tracking & personalized analytics</p>
+        </div>
+        <div class="feature-point">
+          <i class="bi bi-check-circle-fill"></i>
+          <p>Custom dashboards for buyers and vendors</p>
+        </div>
+      </div>
       <button class="main-btn" routerLink="/buyer-dashboard">Buyer Dashboard</button>
       <button class="main-btn main-btn-outline" routerLink="/vendor-dashboard">Vendor Dashboard</button>
+      <button class="main-btn main-btn-outline" routerLink="/admin-dashboard">Admin Panel</button>
     </div>
     <div class="dashboard-images">
       <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=300&q=80" alt="Dashboard 1" />
@@ -64,10 +88,12 @@
   <!-- More Features Section -->
   <section class="more-features">
     <div class="more-feature-card">
+      <i class="fas fa-shield-alt"></i>
       <h4>Secure Payments</h4>
       <p>Our platform uses industry-standard encryption to protect your transactions and data.</p>
     </div>
     <div class="more-feature-card">
+      <i class="fas fa-comments"></i>
       <h4>Direct Communication</h4>
       <p>Message vendors directly for updates, support, and special requests.</p>
     </div>
@@ -85,29 +111,36 @@
     <div class="footer-content">
       <div class="footer-col">
         <h5>Local Ease</h5>
-        <p>Connecting communities through local commerce.</p>
+        <p>Connecting communities through local commerce. Our platform makes it easy to discover & support businesses in your neighbourhood.</p>
       </div>
       <div class="footer-col">
         <h5>Platform</h5>
         <ul>
-          <li><a href="#">Buyers</a></li>
-          <li><a href="#">Vendors</a></li>
+          <li><a href="#">For Vendors</a></li>
+          <li><a href="#">For Buyers</a></li>
+          <li><a href="#">For Administartion</a></li>
+          <li><a href="#">Pricing</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h5>Resources</h5>
         <ul>
           <li><a href="#">Help Center</a></li>
-          <li><a href="#">API Reference</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Community Forum</a></li>
+          <li><a href="#">API Documention</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h5>Company</h5>
         <ul>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Press</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press Kit</a></li>
         </ul>
       </div>
+
     </div>
     <div class="footer-bottom">
       <span>© 2024 Local Ease. All rights reserved.</span>

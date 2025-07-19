@@ -73,7 +73,7 @@
   border-radius: 16px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
   padding: 2rem 1.2rem;
-  min-width: 180px;
+  min-width: 200px;
   max-width: 220px;
   flex: 0 0 200px;
 }
@@ -82,7 +82,7 @@
   padding: 0;
   margin: 0;
 }
-.sidebar ul li {
+.sidebar ul li{
   padding: 0.7rem 1rem;
   border-radius: 8px;
   color: #444;
@@ -91,10 +91,17 @@
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
 }
+.sidebar ul li i{
+  color: #ff6b3d;
+}
+.sidebar ul li.active i{
+  color: #fff;
+}
 .sidebar ul li.active, .sidebar ul li:hover {
   background: #ff6b3d;
   color: #fff;
 }
+
 
 /* Dashboard Content */
 .dashboard-content {

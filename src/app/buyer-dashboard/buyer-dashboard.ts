@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-buyer-dashboard',
@@ -6,4 +6,14 @@ import { Component } from '@angular/core';
   templateUrl: './buyer-dashboard.html',
   styleUrl: './buyer-dashboard.css'
 })
-export class BuyerDashboard {}
+export class BuyerDashboard implements OnInit {
+
+  accountName: string = 'Michael'; // Default fallback
+
+  ngOnInit(): void {
+    const storedName = localStorage.getItem('username');
+    if (storedName) {
+      this.accountName = storedName;
+    }
+  }
+}

@@ -19,18 +19,52 @@
   <div class="dashboard-main">
    <!-- Sidebar -->
     <aside class="sidebar">
-      <ul>
-        <li class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</li>
-        <li><i class="fas fa-map-marker-alt"></i> Nearby Vendors</li>
-        <li><i class="fas fa-tags"></i> Deals</li>
-        <li><i class="fas fa-star"></i> Top Rated</li>
-        <li><i class="fas fa-history"></i> Recent Orders</li>
-        <li><i class="fas fa-heart"></i> Favorites</li>
-        <li><i class="fas fa-cog"></i> Settings</li>
-        <li><i class="fas fa-question-circle"></i> Help & Support</li>
-        <li><i class="fas fa-sign-out-alt"></i> Logout</li>
+      <ul class="sidebar-menu">
+        <li routerLink="/dashboard" routerLinkActive="active">
+          <i class="fas fa-home"></i><span>Dashboard</span>
+        </li>
+        <li routerLink="/vendor-dashboard" routerLinkActive="active">
+          <i class="fas fa-store"></i><span>Nearby Vendors</span>
+        </li>
+        <li routerLink="/cart" routerLinkActive="active">
+          <i class="fas fa-shopping-cart"></i><span>My Cart</span>
+        </li>
+        <li routerLink="/orders" routerLinkActive="active">
+          <i class="fas fa-box"></i><span>My Orders</span>
+        </li>
+        <li routerLink="/order-tracking" routerLinkActive="active">
+          <i class="fas fa-shipping-fast"></i><span>Track Delivery</span>
+        </li>
+        <li routerLink="/favorites" routerLinkActive="active">
+          <i class="fas fa-heart"></i><span>Favorites</span>
+        </li>
+        <li routerLink="/profile" routerLinkActive="active">
+          <i class="fas fa-user"></i><span>Profile</span>
+        </li>
+
+        <!-- Offer section -->
+        <div class="offer-box">
+          <div class="offer-strip"></div>
+          <div class="offer-content">
+            <strong>New Offer Available!</strong>
+            <p>Get 15% off on your first order from nearby vendors.</p>
+          </div>
+        </div>
+
+
+        <!-- Footer section -->
+        <li routerLink="/settings" routerLinkActive="active">
+          <i class="fas fa-cog"></i><span>Settings</span>
+        </li>
+        <li routerLink="/help" routerLinkActive="active">
+          <i class="fas fa-question-circle"></i><span>Help & Support</span>
+        </li>
+        <li routerLink="/logout" routerLinkActive="active">
+          <i class="fas fa-sign-out-alt"></i><span>Logout</span>
+        </li>
       </ul>
     </aside>
+    <!--Side bar end-->
 
     <!-- Main Content -->
     <section class="dashboard-content">

@@ -67,40 +67,6 @@
   padding: 2rem 2vw;
 }
 
-/* Sidebar */
-/* .sidebar {
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  padding: 2rem 1.2rem;
-  min-width: 200px;
-  max-width: 220px;
-  flex: 0 0 200px;
-}
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.sidebar ul li{
-  padding: 0.7rem 1rem;
-  border-radius: 8px;
-  color: #444;
-  font-weight: 500;
-  margin-bottom: 0.3rem;
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
-}
-.sidebar ul li i{
-  color: #ff6b3d;
-}
-.sidebar ul li.active i{
-  color: #fff;
-}
-.sidebar ul li.active, .sidebar ul li:hover {
-  background: #ff6b3d;
-  color: #fff;
-} */
 /* Sidebar Container */
 .sidebar {
   background: #fff;
@@ -112,8 +78,10 @@
   flex: 0 0 220px;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  overflow-y: auto;
+  height: 89vh;
+  position: sticky;
+  top: 0;
+  border-right: 1px solid #eee;
 }
 
 /* Sidebar List */
@@ -155,40 +123,6 @@
 .sidebar ul li:hover i {
   color: #fff;
 }
-
-/* Offer Section */
-/* .sidebar .offer-box {
-  background: #fff0e6;
-  padding: 1rem;
-  border-radius: 12px;
-  display: flex;
-  gap: 0.75rem;
-  margin: 1.2rem 0;
-  font-size: 0.85rem;
-  color: #444;
-  align-items: flex-start;
-}
-
-.sidebar .offer-strip {
-  width: 4px;
-  background-color: #f05a28;
-  border-radius: 2px;
-  height: 100%;
-}
-
-.sidebar .offer-content strong {
-  color: #000;
-  display: block;
-  margin-bottom: 0.25rem;
-  font-weight: 600;
-  font-size: 0.9rem;
-}
-
-.sidebar .offer-content p {
-  margin: 0;
-  font-size: 0.8rem;
-  color: #444;
-} */
 /* Sidebar Offer Section */
 .sidebar .offer-box {
   display: flex;
@@ -226,7 +160,6 @@
   font-size: 0.8rem;
   color: #444;
 }
-
 
 /* Dashboard Content */
 .dashboard-content {

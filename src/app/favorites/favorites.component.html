@@ -1,0 +1,15 @@
+<div class="favorites-container">
+  <h2>My Favorites</h2>
+
+  <!-- <div class="input-area">
+    <input [(ngModel)]="newItem" placeholder="Add a new favorite..." />
+    <button (click)="addFavorite()">Add</button>
+  </div> -->
+
+  <ul class="favorites-list">
+    <li *ngFor="let item of favorites; let i = index">
+      <span>{{ item }}</span>
+      <button class="remove-btn" (click)="removeFavorite(i)">✕</button>
+    </li>
+  </ul>
+</div>

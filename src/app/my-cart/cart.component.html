@@ -1,0 +1,38 @@
+<div class="cart-wrapper">
+  <h2>Shopping Cart</h2>
+
+  <div *ngIf="cartItems.length > 0; else emptyCart">
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Price (₹)</th>
+          <th>Quantity</th>
+          <th>Subtotal</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of cartItems">
+          <td>{{ item.name }}</td>
+          <td>{{ item.price }}</td>
+          <td>
+            <input type="number" [(ngModel)]="item.quantity" min="1" />
+          </td>
+          <td>{{ item.price * item.quantity }}</td>
+          <td>
+            <button (click)="removeItem(item.id)">Remove</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="total">
+      <strong>Total: ₹{{ getTotal() }}</strong>
+    </div>
+  </div>
+
+  <ng-template #emptyCart>
+    <p>Your cart is empty.</p>
+  </ng-template>
+</div>

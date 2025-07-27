@@ -6,7 +6,10 @@ import { VendorDashboard } from './vendor-dashboard/vendor-dashboard';
 import { AdminDashboard } from './admin-dashboard/admin-dashboard';
 import { OrderTracking } from './order-tracking/order-tracking';
 import { PaymentGateway } from './payment-gateway/payment-gateway';
-
+import { ProfileComponent } from './profile/profile.component';
+import { CartComponent } from './my-cart/cart.component';
+import { MyOrdersComponent } from './my-orders/my-orders.component';
+import { FavoritesComponent } from './favorites/favorites.component';
 export const routes: Routes = [
   { path: '', component: LandingPage },
   { path: 'login', component: LoginSignup },
@@ -15,4 +18,8 @@ export const routes: Routes = [
   { path: 'admin-dashboard', component: AdminDashboard },
   { path: 'order-tracking', component: OrderTracking },
   { path: 'payment-gateway', component: PaymentGateway },
+  { path: 'profile', component: ProfileComponent },
+  { path: 'cart', component: CartComponent },
+  { path: 'my-order', component: MyOrdersComponent },
+  { path: 'favorites', component: FavoritesComponent },
 ];

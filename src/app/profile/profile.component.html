@@ -1,0 +1,23 @@
+<div class="profile-container">
+  <h2>My Profile</h2>
+
+  <div class="profile-card">
+    <img src="assets/profile-default.png" alt="User Image" class="profile-img" />
+
+    <div class="profile-details">
+      <label>Full Name</label>
+      <input type="text" [(ngModel)]="profile.name" placeholder="Enter your name" />
+
+      <label>Email</label>
+      <input type="email" [(ngModel)]="profile.email" placeholder="Enter your email" />
+
+      <label>Phone Number</label>
+      <input type="tel" [(ngModel)]="profile.phone" placeholder="Enter your phone number" />
+
+      <label>Delivery Address</label>
+      <textarea [(ngModel)]="profile.address" placeholder="Enter your delivery address"></textarea>
+
+      <button class="main-btn" (click)="updateProfile()">Update Profile</button>
+    </div>
+  </div>
+</div>

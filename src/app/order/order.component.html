@@ -1,0 +1,34 @@
+<div class="order-wrapper">
+  <h2 class="title">My Orders</h2>
+
+  <table class="order-table" *ngIf="orders.length > 0; else noOrders">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Product</th>
+        <th>Qty</th>
+        <th>Price</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders">
+        <td>{{ order.id }}</td>
+        <td>{{ order.productName }}</td>
+        <td>{{ order.quantity }}</td>
+        <td>₹{{ order.price }}</td>
+        <td>{{ order.status }}</td>
+        <td>
+          <button class="btn orange" (click)="viewOrder(order)">View</button>
+          <button class="btn light-orange" (click)="editOrder(order)">Edit</button>
+          <button class="btn danger" (click)="deleteOrder(order)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ng-template #noOrders>
+    <p class="no-orders">No orders available.</p>
+  </ng-template>
+</div>

@@ -9,10 +9,16 @@ import { ProfileComponent } from './profile/profile.component';
 import { CartComponent } from './my-cart/cart.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
 import { FavoritesComponent } from './favorites/favorites.component';
+import { UserManagementComponent } from './user-mang/user-management.component';
+import { VendorManagementComponent } from './vendor-mang/vendor-management.component';
+import { OrderManagementComponent } from './order-mang/order-management.component';
+import { ProductPageComponent } from './product/product-page.component';
+import { OrderComponent } from './order/order.component';
+import { ReturnsRefundsComponent } from './return-refunds/returns-refunds.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, LoginSignup, LandingPage, BuyerDashboard, VendorDashboard, OrderTracking, ProfileComponent, CartComponent, MyOrdersComponent, FavoritesComponent],
+  imports: [RouterOutlet, LoginSignup, LandingPage, BuyerDashboard, VendorDashboard, OrderTracking, ProfileComponent, CartComponent, MyOrdersComponent, FavoritesComponent, UserManagementComponent, VendorManagementComponent, OrderManagementComponent, ProductPageComponent, OrderComponent, ReturnsRefundsComponent ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

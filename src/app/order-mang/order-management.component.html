@@ -1,0 +1,43 @@
+<div class="order-mgmt-container">
+  <h2>Order Management</h2>
+
+  <div class="form-section">
+    <input [(ngModel)]="newOrder.orderId" placeholder="Order ID" />
+    <input [(ngModel)]="newOrder.customerName" placeholder="Customer Name" />
+    <select [(ngModel)]="newOrder.status">
+      <option value="Pending">Pending</option>
+      <option value="Shipped">Shipped</option>
+      <option value="Delivered">Delivered</option>
+    </select>
+
+    <button (click)="editingIndex === null ? addOrder() : updateOrder()">
+      {{ editingIndex === null ? 'Add Order' : 'Update Order' }}
+    </button>
+
+    <button *ngIf="editingIndex !== null" class="cancel-btn" (click)="resetForm()">Cancel</button>
+  </div>
+
+  <table class="order-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Order ID</th>
+        <th>Customer</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ order.orderId }}</td>
+        <td>{{ order.customerName }}</td>
+        <td>{{ order.status }}</td>
+        <td>
+          <button class="edit-btn" (click)="editOrder(i)">Edit</button>
+          <button class="delete-btn" (click)="deleteOrder(i)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

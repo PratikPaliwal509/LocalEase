@@ -70,7 +70,7 @@ a {
   padding: 2rem 2vw;
 }
 
-/* Sidebar Container */
+/* Sidebar */
 .sidebar {
   background: #fff;
   border-radius: 16px;
@@ -86,14 +86,12 @@ a {
   top: 0;
   border-right: 1px solid #eee;
 }
-
 /* Sidebar List */
 .sidebar ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
 /* List Items */
 .sidebar ul li {
   display: flex;
@@ -108,14 +106,12 @@ a {
   transition: background 0.2s, color 0.2s;
   white-space: nowrap;
 }
-
 /* Icons */
 .sidebar ul li i {
   color: #ff6b3d;
   font-size: 1.1rem;
   min-width: 20px;
 }
-
 /* Active/hover state */
 .sidebar ul li.active,
 .sidebar ul li:hover {
@@ -138,18 +134,15 @@ a {
   font-size: 0.85rem;
   color: #444;
 }
-
 .sidebar .offer-strip {
   width: 4px;
   background-color: #f05a28;
   border-radius: 2px;
   height: 100%;
 }
-
 .sidebar .offer-content {
   flex: 1;
 }
-
 .sidebar .offer-content strong {
   color: #000;
   font-weight: 600;
@@ -157,7 +150,6 @@ a {
   display: block;
   margin-bottom: 0.3rem;
 }
-
 .sidebar .offer-content p {
   margin: 0;
   font-size: 0.8rem;

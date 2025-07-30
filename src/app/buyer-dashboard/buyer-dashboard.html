@@ -20,7 +20,28 @@
    <!-- Sidebar -->
     <aside class="sidebar">
       <ul class="sidebar-menu">
-        <li routerLink="/dashboard" routerLinkActive="active">
+        <a href="/buyer-dashboard"><li routerLink="/dashboard" routerLinkActive="active">
+          <i class="fas fa-home"></i><span>Dashboard</span>
+        </li></a>
+        <a href="/buyer-dashboard"><li routerLink="/vendor-dashboard" routerLinkActive="active">
+          <i class="fas fa-store"></i><span>Nearby Vendors</span>
+        </li></a>
+        <a href="my-cart"><li routerLink="/cart" routerLinkActive="active">
+          <i class="fas fa-shopping-cart"></i><span>My Cart</span>
+        </li></a>
+        <a href="my-order"><li routerLink="/orders" routerLinkActive="active">
+          <i class="fas fa-box"></i><span>My Orders</span>
+        </li></a>
+        <a href="order-tracking"><li routerLink="/order-tracking" routerLinkActive="active">
+          <i class="fas fa-shipping-fast"></i><span>Track Delivery</span>
+        </li></a>
+        <a href="favorites"><li routerLink="/favorites" routerLinkActive="active">
+          <i class="fas fa-heart"></i><span>Favorites</span>
+        </li></a>
+        <a href="profile"><li routerLink="/profile" routerLinkActive="active">
+          <i class="fas fa-user"></i><span>Profile</span>
+        </li></a>
+        <!-- <li routerLink="/dashboard" routerLinkActive="active">
           <i class="fas fa-home"></i><span>Dashboard</span>
         </li>
         <li routerLink="/vendor-dashboard" routerLinkActive="active">
@@ -40,7 +61,7 @@
         </li>
         <li routerLink="/profile" routerLinkActive="active">
           <i class="fas fa-user"></i><span>Profile</span>
-        </li>
+        </li> -->
 
         <!-- Offer section -->
         <div class="offer-box">
@@ -53,15 +74,15 @@
 
 
         <!-- Footer section -->
-        <li routerLink="/settings" routerLinkActive="active">
+        <a href="/setting"><li routerLink="/settings" routerLinkActive="active">
           <i class="fas fa-cog"></i><span>Settings</span>
-        </li>
-        <li routerLink="/help" routerLinkActive="active">
+        </li></a>
+        <a href="/help-support"><li routerLink="/help" routerLinkActive="active">
           <i class="fas fa-question-circle"></i><span>Help & Support</span>
-        </li>
-        <li routerLink="/logout" routerLinkActive="active">
+        </li></a>
+        <a href="/logout"><li routerLink="/logout" routerLinkActive="active">
           <i class="fas fa-sign-out-alt"></i><span>Logout</span>
-        </li>
+        </li></a>
       </ul>
     </aside>
     <!--Side bar end-->

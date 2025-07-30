@@ -6,7 +6,16 @@ import { VendorDashboard } from './vendor-dashboard/vendor-dashboard';
 import { AdminDashboard } from './admin-dashboard/admin-dashboard';
 import { OrderTracking } from './order-tracking/order-tracking';
 import { PaymentGateway } from './payment-gateway/payment-gateway';
-
+import { ProfileComponent } from './profile/profile.component';
+import { CartComponent } from './my-cart/cart.component';
+import { MyOrdersComponent } from './my-orders/my-orders.component';
+import { FavoritesComponent } from './favorites/favorites.component';
+import { UserManagementComponent } from './user-mang/user-management.component';
+import { VendorManagementComponent } from './vendor-mang/vendor-management.component';
+import { OrderManagementComponent } from './order-mang/order-management.component';
+import { ProductPageComponent } from './product/product-page.component';
+import { OrderComponent } from './order/order.component';
+import { ReturnsRefundsComponent } from './return-refunds/returns-refunds.component';
 export const routes: Routes = [
   { path: '', component: LandingPage },
   { path: 'login', component: LoginSignup },
@@ -15,4 +24,14 @@ export const routes: Routes = [
   { path: 'admin-dashboard', component: AdminDashboard },
   { path: 'order-tracking', component: OrderTracking },
   { path: 'payment-gateway', component: PaymentGateway },
+  { path: 'profile', component: ProfileComponent },
+  { path: 'cart', component: CartComponent },
+  { path: 'my-order', component: MyOrdersComponent },
+  { path: 'favorites', component: FavoritesComponent },
+  { path: 'user-mang', component: UserManagementComponent },
+  { path: 'vendor-mang', component: VendorManagementComponent },
+  { path: 'order-mang', component: OrderManagementComponent },
+  { path: 'product', component: ProductPageComponent },
+  { path: 'order', component: OrderComponent },
+  { path: 'return-refunds', component: ReturnsRefundsComponent },
 ];

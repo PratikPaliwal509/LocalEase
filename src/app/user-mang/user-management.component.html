@@ -1,0 +1,43 @@
+<div class="user-mgmt-container">
+  <h2>User Management</h2>
+
+  <div class="form-section">
+    <input [(ngModel)]="newUser.name" placeholder="Name" />
+    <input [(ngModel)]="newUser.email" placeholder="Email" />
+    <select [(ngModel)]="newUser.role">
+      <option value="Admin">Admin</option>
+      <option value="Editor">Editor</option>
+      <option value="Viewer">Viewer</option>
+    </select>
+
+    <button (click)="editingIndex === null ? addUser() : updateUser()">
+      {{ editingIndex === null ? 'Add User' : 'Update User' }}
+    </button>
+
+    <button *ngIf="editingIndex !== null" class="cancel-btn" (click)="cancelEdit()">Cancel</button>
+  </div>
+
+  <table class="user-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Role</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.role }}</td>
+        <td>
+          <button class="edit-btn" (click)="editUser(i)">Edit</button>
+          <button class="delete-btn" (click)="deleteUser(i)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

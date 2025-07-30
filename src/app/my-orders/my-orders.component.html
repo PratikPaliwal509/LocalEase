@@ -1,0 +1,30 @@
+<div class="orders-wrapper">
+  <h2 class="orders-title">My Orders</h2>
+
+  <div *ngFor="let order of orders" class="order-card">
+    <div class="order-header">
+      <div>
+        <h3 class="order-id">Order #{{ order.orderId }}</h3>
+        <p class="order-date">Date: {{ order.date }}</p>
+      </div>
+      <span class="order-status"
+            [ngClass]="{
+              'status-delivered': order.status === 'Delivered',
+              'status-shipped': order.status === 'Shipped',
+              'status-cancelled': order.status === 'Cancelled'
+            }">
+        {{ order.status }}
+      </span>
+    </div>
+
+    <ul class="order-items">
+      <li *ngFor="let item of order.items">
+        {{ item.name }} × {{ item.quantity }}
+      </li>
+    </ul>
+
+    <div class="order-total">
+      Total: {{ order.total }}
+    </div>
+  </div>
+</div>

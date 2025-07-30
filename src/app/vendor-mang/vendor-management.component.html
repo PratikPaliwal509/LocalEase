@@ -1,0 +1,39 @@
+<div class="vendor-mgmt-container">
+  <h2>Vendor Management</h2>
+
+  <div class="form-section">
+    <input [(ngModel)]="newVendor.name" placeholder="Vendor Name" />
+    <input [(ngModel)]="newVendor.company" placeholder="Company Name" />
+    <input [(ngModel)]="newVendor.contact" placeholder="Contact Email" />
+
+    <button (click)="editingIndex === null ? addVendor() : updateVendor()">
+      {{ editingIndex === null ? 'Add Vendor' : 'Update Vendor' }}
+    </button>
+
+    <button *ngIf="editingIndex !== null" class="cancel-btn" (click)="cancelEdit()">Cancel</button>
+  </div>
+
+  <table class="vendor-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Vendor Name</th>
+        <th>Company</th>
+        <th>Contact</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let vendor of vendors; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ vendor.name }}</td>
+        <td>{{ vendor.company }}</td>
+        <td>{{ vendor.contact }}</td>
+        <td>
+          <button class="edit-btn" (click)="editVendor(i)">Edit</button>
+          <button class="delete-btn" (click)="deleteVendor(i)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

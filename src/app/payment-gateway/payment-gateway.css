@@ -1,164 +1,8 @@
-/* .payment-container {
-  padding: 2rem;
-  background-color: #f9fafc;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-.back-link {
-  display: inline-block;
-  margin-bottom: 1rem;
-  color: #f15a24;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.payment-box {
-  display: flex;
-  gap: 2rem;
-  padding: 1rem;
-  border-radius: 12px;
-}
-
-.left-section {
-  flex: 2;
-  min-width: 300px; 
-}
-
-.right-section {
-  flex: 1.2;
-  min-width: 280px;
-  background: #fff;
-}
-
-h2, h3 {
-  margin-bottom: 1rem;
-}
-
-.payment-methods {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 2rem;
-  gap: 2rem;
-  background: white;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-  flex-wrap: wrap;
-}
-
-.payment-option {
-  display: flex;
-  align-items: center;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 1rem;
-  cursor: pointer;
-  gap: 1rem;
-  background: #fefefe;
-}
-
-.payment-option:hover {
-  border-color: #f15a24;
-}
-
-.payment-option img {
-  width: 48px;
-  height: auto;
-}
-
-.billing-info input {
-  display: block;
-  width: 100%;
-  padding: 10px 14px;
-  margin: 0.5rem 0;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-
-.name-fields, .location-fields {
-  display: flex;
-  gap: 1rem;
-}
-
-.name-fields input, .location-fields input {
-  flex: 1;
-}
-
-.summary-item {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 0.4rem;
-}
-
-.discount span {
-  color: green;
-}
-
-.summary-total {
-  font-weight: bold;
-  font-size: 1.2rem;
-  margin-top: 1rem;
-  display: flex;
-  justify-content: space-between;
-}
-
-.checkboxes {
-  margin: 1rem 0;
-}
-
-.checkboxes label {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
-}
-
-.pay-btn {
-  width: 100%;
-  padding: 12px;
-  background-color: #f15a24;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 1.1rem;
-  margin-bottom: 0.8rem;
-  cursor: pointer;
-}
-
-.secure-note {
-  text-align: center;
-  color: #666;
-  font-size: 0.85rem;
-  margin-bottom: 1rem;
-}
-
-.payment-icons {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 1rem;
-}
-
-.payment-icons img {
-  height: 24px;
-}
-
-.help-section {
-  text-align: center;
-  font-size: 0.9rem;
-}
-
-.help-section p {
-  margin: 0.4rem 0;
-} */
-/* CSS */
 .payment-container {
   padding: 2rem;
   background-color: #f9fafc;
   font-family: 'Segoe UI', sans-serif;
 }
-
 .back-link {
   display: inline-block;
   margin-bottom: 1rem;
@@ -166,13 +10,11 @@ h2, h3 {
   text-decoration: none;
   font-weight: 600;
 }
-
 .payment-wrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
 }
-
 /* Left section styling */
 .payment-box {
   flex: 2;
@@ -188,28 +30,24 @@ h2, h3 {
   border-radius: 12px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
 }
-
 .payment-methods h3 {
   margin-bottom: 1rem;
   color: #222;
 }
-
 .payment-option {
   display: flex;
   align-items: center;
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 1rem;
+  padding: 0.7rem;
   cursor: pointer;
   gap: 1rem;
   background: #fefefe;
   transition: red 0.3s;
 }
-
 .payment-option:hover {
   border-color: #f15a24;
 }
-
 .payment-option img {
   width: 48px;
   height: auto;
@@ -220,24 +58,20 @@ h2, h3 {
   width: 100%;
   align-items: center;
 }
-
 .payment-option-name strong {
   font-weight: 600;
 }
-
 .payment-option-name small {
   color: #666;
   font-size: 0.9rem;
-  margin-left: auto; 
+  margin-left: 1.4rem; 
 }
-
 .billing-info{
   background: #fff;
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
 }
-
 .billing-info input {
   display: block;
   width: 100%;
@@ -246,16 +80,13 @@ h2, h3 {
   border-radius: 6px;
   border: 1px solid #ccc;
 }
-
 .name-fields, .location-fields {
   display: flex;
   gap: 1rem;
 }
-
 .name-fields input, .location-fields input {
   flex: 1;
 }
-
 /* Right section styling */
 .right-section {
   flex: 0.7;
@@ -267,23 +98,19 @@ h2, h3 {
   border-radius: 12px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
 }
-
 h2, h3 {
   margin-bottom: 1rem;
   color: #222;
 }
-
 .summary-item {
   display: flex;
   justify-content: space-between;
   margin-bottom: 0.4rem;
   font-size: 0.95rem;
 }
-
 .discount span {
   color: green;
 }
-
 .summary-total {
   font-weight: bold;
   font-size: 1.2rem;
@@ -291,11 +118,9 @@ h2, h3 {
   display: flex;
   justify-content: space-between;
 }
-
 .checkboxes {
   margin: 1.2rem 0;
 }
-
 .checkboxes label {
   display: flex;
   align-items: center;
@@ -303,7 +128,6 @@ h2, h3 {
   font-size: 0.9rem;
   margin-bottom: 0.5rem;
 }
-
 .pay-btn {
   width: 100%;
   padding: 12px;
@@ -316,44 +140,37 @@ h2, h3 {
   cursor: pointer;
   transition: background-color 0.3s;
 }
-
 .pay-btn:hover {
   background-color: #d94e1c;
 }
-
 .secure-note {
   text-align: center;
   color: #666;
   font-size: 0.85rem;
   margin-bottom: 1rem;
 }
-
 .payment-icons {
   display: flex;
   justify-content: center;
   gap: 10px;
   margin-bottom: 1rem;
 }
-
 .payment-icons img {
   height: 24px;
 }
-
 .help-section {
   text-align: center;
   font-size: 0.9rem;
 }
-
 .help-section p {
   margin: 0.4rem 0;
 }
-
 .help-section a {
   color: #f15a24;
   text-decoration: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .payment-wrapper {
     flex-direction: column;
   }

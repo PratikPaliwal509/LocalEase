@@ -96,24 +96,13 @@
   color: #fff;
 }
 
-/* Main Content */
-.order-tracking-content {
-  flex: 1 1 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-.order-tracking-row {
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
+/* Top Bar */
 .top-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
-  flex-wrap: wrap; /* optional, ensures responsiveness */
+  flex-wrap: wrap;
 }
 .dashboard-title {
   font-size: 1.5rem;
@@ -125,6 +114,21 @@
   gap: 1rem;
   margin-bottom: 0.5rem;
 }
+/* Main Content */
+.order-tracking-content {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.order-tracking-row {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
 .main-btn {
   background: #ff6b3d;
   color: #fff;
@@ -149,6 +153,8 @@
   background: #ff6b3d;
   color: #fff;
 }
+
+/* Cards */
 .card {
   background: #fff;
   border-radius: 16px;
@@ -160,6 +166,11 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+/* Map Section */
+.map-section{
+  min-width: 60%;
 }
 .map-section h4 {
   color: #ff6b3d;
@@ -175,6 +186,25 @@
   margin-bottom: 0.7rem;
   background: #eee;
 }
+.map-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.order-id {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+  margin-left: 0.3rem;
+}
+.tracking-status {
+  font-size: 0.92rem;
+  color: #27ae60;
+  font-weight: 500;
+  margin-top: 0.2rem;
+}
+
+/* Delivery Progress */
 .delivery-progress h5 {
   color: #222;
   font-size: 1rem;
@@ -186,6 +216,7 @@
   list-style: none;
   padding: 0;
   margin: 0 0 0.5rem 0;
+  flex-wrap: wrap;
 }
 .delivery-progress ul li {
   padding: 0.3rem 0.9rem;
@@ -211,7 +242,8 @@
   margin-top: 0.3rem;
 }
 
-.order-summary-section h4 {
+/* Order Summary Section */
+.order-details-section h4{
   color: #ff6b3d;
   margin-bottom: 0.5rem;
   font-size: 1.1rem;
@@ -225,10 +257,14 @@
   flex-direction: column;
   gap: 0.2rem;
 }
+.order-summary-section{
+  margin-right: 5rem;
+}
 .order-summary-section h5 {
-  color: #222;
-  font-size: 1rem;
-  margin: 0.7rem 0 0.3rem 0;
+  color: #ff6b3d;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
 }
 .order-items {
   list-style: none;
@@ -250,39 +286,41 @@
   margin-bottom: 0.7rem;
   font-size: 1.05rem;
 }
+.final-total {
+  border-top: 1px solid #ddd;
+  padding-top: 0.5rem;
+}
+
+/* Contact Delivery Person */
 .contact-delivery h5 {
   color: #222;
   font-size: 1rem;
   margin-bottom: 0.3rem;
 }
+.contact-delivery img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0.3rem 0;
+}
+.contact-delivery b {
+  font-size: 1rem;
+  color: #333;
+  margin: .75rem;
+}
+.rating {
+  display: flex;
+  align-items: end;
+  font-size: 0.95rem;
+  color: #888;
+}
 .contact-actions {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 0.7rem;
   margin-bottom: 0.5rem;
-}
-.main-btn {
-  background: #ff6b3d;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 0.5rem 1.2rem;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.main-btn-outline {
-  background: #fff;
-  color: #ff6b3d;
-  border: 2px solid #ff6b3d;
-}
-.main-btn:hover {
-  background: #e65a2d;
-  color: #fff;
-}
-.main-btn-outline:hover {
-  background: #ff6b3d;
-  color: #fff;
 }
 .message-input {
   width: 100%;
@@ -297,7 +335,6 @@
 .message-input:focus {
   border: 1.5px solid #ff6b3d;
 }
-
 @media (max-width: 1200px) {
   .dashboard-main {
     flex-direction: column;

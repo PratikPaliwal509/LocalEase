@@ -36,28 +36,32 @@
     <section class="order-tracking-content">
       <div class="top-bar">
           <h2 class="dashboard-title">Track Your Order</h2>
-          <p>Real time updates on your orders</p>
           <div class="actions-row">
-            <button class="main-btn" >Back to Dashboard</button>
+            <button class="main-btn" routerLink="./vendor-dashboard">Back to Dashboard</button>
             <button class="main-btn main-btn-outline">Payment Details</button>
           </div>
-        </div>
+      </div>
       <div class="order-tracking-row">
         <div class="card map-section">
-          <h4>Track Your Order</h4>
+          <div class="map-header">
+            <div>
+              <strong>Order</strong> <span class="order-id">#RT78945</span>
+              <div class="tracking-status">🟢 Live Tracking</div>
+            </div>
+          </div>
           <img class="map-img" src="https://maps.googleapis.com/maps/api/staticmap?center=New+York,NY&zoom=14&size=400x180&key=YOUR_API_KEY" alt="Order Map" />
           <div class="delivery-progress">
             <h5>Delivery Progress</h5>
             <ul>
-              <li class="done">Confirmed</li>
-              <li class="done">Packed</li>
-              <li class="active">Out for Delivery</li>
-              <li>Delivered</li>
+              <li class="done"><strong>Order Confirmed</strong><br /><small>Today, 10:30 AM</small></li>
+              <li class="done"><strong>Order Prepared</strong><br /><small>Today, 11:15 AM</small></li>
+              <li class="active"><strong>Out for Delivery</strong><br /><small>Today, 11:45 AM</small></li>
+              <li class="active"><strong>Delivered</strong><br /><small>Delivered</small></li>
             </ul>
             <div class="delivery-time">Estimated delivery: Today, 2:45 PM</div>
           </div>
         </div>
-        <div class="card order-summary-section">
+        <div class="card order-details-section">
           <h4>Order Details</h4>
           <div class="order-details">
             <div><b>Order #</b> 8177605</div>
@@ -65,6 +69,21 @@
             <div><b>Delivery Address:</b> 123 Main Street, NY</div>
             <div><b>Buyer:</b> Michael</div>
           </div>
+          <div class="contact-delivery">
+            <h5>Contact Delivery Person</h5>
+            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Delivery Person" />
+            <b>Michael Rodriguez</b><br />
+            <div>  
+              <span class="rating">⭐ 4.8</span>
+            </div>
+            <div class="contact-actions">
+              <button class="main-btn">Call</button>
+              <button class="main-btn main-btn-outline">Message</button>
+            </div>
+            <input class="message-input" type="text" placeholder="Type a custom message..." />
+          </div>
+        </div>
+        <div class="card order-summary-section">
           <h5>Order Summary</h5>
           <ul class="order-items">
             <li><span>Whole Grain Bread</span><span>$4.5</span></li>
@@ -73,16 +92,17 @@
             <li><span>Ribeye Steak</span><span>$18.0</span></li>
           </ul>
           <div class="order-total">
-            <span>Total</span>
+            <span>Subtotal</span>
             <span>$28.6</span>
           </div>
-          <div class="contact-delivery">
-            <h5>Contact Delivery Person</h5>
-            <div class="contact-actions">
-              <button class="main-btn">Call</button>
-              <button class="main-btn main-btn-outline">Message</button>
-            </div>
-            <input class="message-input" type="text" placeholder="Type a custom message..." />
+          <div class="order-total">
+            <span>Delivery Fee</span><span>$3.99</span>
+          </div>
+          <div class="order-total">
+            <span>Tax</span><span>$2.45</span>
+          </div>
+          <div class="order-total final-total">
+            <span>Total</span><span>$32.93</span>
           </div>
         </div>
       </div>

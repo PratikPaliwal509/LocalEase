@@ -23,46 +23,24 @@
         <a href="/buyer-dashboard"><li routerLink="/dashboard" routerLinkActive="active">
           <i class="fas fa-home"></i><span>Dashboard</span>
         </li></a>
-        <a href="/buyer-dashboard"><li routerLink="/vendor-dashboard" routerLinkActive="active">
+        <a href="/vendor-dashboard"><li routerLink="/vendor-dashboard" routerLinkActive="active">
           <i class="fas fa-store"></i><span>Nearby Vendors</span>
         </li></a>
-        <a href="my-cart"><li routerLink="/cart" routerLinkActive="active">
+        <a href="/my-cart"><li routerLink="/cart" routerLinkActive="active">
           <i class="fas fa-shopping-cart"></i><span>My Cart</span>
         </li></a>
-        <a href="my-order"><li routerLink="/orders" routerLinkActive="active">
+        <a href="/my-order"><li routerLink="/orders" routerLinkActive="active">
           <i class="fas fa-box"></i><span>My Orders</span>
         </li></a>
-        <a href="order-tracking"><li routerLink="/order-tracking" routerLinkActive="active">
+        <a href="/order-tracking"><li routerLink="/order-tracking" routerLinkActive="active">
           <i class="fas fa-shipping-fast"></i><span>Track Delivery</span>
         </li></a>
-        <a href="favorites"><li routerLink="/favorites" routerLinkActive="active">
+        <a href="/favorites"><li routerLink="/favorites" routerLinkActive="active">
           <i class="fas fa-heart"></i><span>Favorites</span>
         </li></a>
-        <a href="profile"><li routerLink="/profile" routerLinkActive="active">
+        <a href="/profile"><li routerLink="/profile" routerLinkActive="active">
           <i class="fas fa-user"></i><span>Profile</span>
         </li></a>
-        <!-- <li routerLink="/dashboard" routerLinkActive="active">
-          <i class="fas fa-home"></i><span>Dashboard</span>
-        </li>
-        <li routerLink="/vendor-dashboard" routerLinkActive="active">
-          <i class="fas fa-store"></i><span>Nearby Vendors</span>
-        </li>
-        <li routerLink="/cart" routerLinkActive="active">
-          <i class="fas fa-shopping-cart"></i><span>My Cart</span>
-        </li>
-        <li routerLink="/orders" routerLinkActive="active">
-          <i class="fas fa-box"></i><span>My Orders</span>
-        </li>
-        <li routerLink="/order-tracking" routerLinkActive="active">
-          <i class="fas fa-shipping-fast"></i><span>Track Delivery</span>
-        </li>
-        <li routerLink="/favorites" routerLinkActive="active">
-          <i class="fas fa-heart"></i><span>Favorites</span>
-        </li>
-        <li routerLink="/profile" routerLinkActive="active">
-          <i class="fas fa-user"></i><span>Profile</span>
-        </li> -->
-
         <!-- Offer section -->
         <div class="offer-box">
           <div class="offer-strip"></div>
@@ -71,8 +49,6 @@
             <p>Get 15% off on your first order from nearby vendors.</p>
           </div>
         </div>
-
-
         <!-- Footer section -->
         <a href="/setting"><li routerLink="/settings" routerLinkActive="active">
           <i class="fas fa-cog"></i><span>Settings</span>
@@ -173,102 +149,6 @@
       </div>
 
       <div class="dashboard-row">
-          <!-- <div class="card vendors-map full-width">
-            <h4>Nearby Vendors</h4>
-            <img class="map-img" src="https://maps.googleapis.com/maps/api/staticmap?center=New+York,NY&zoom=13&size=600x150&key=YOUR_API_KEY" alt="Vendors Map" />
-            
-            <div class="vendor-list">
-              <div class="vendor-item">
-                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=40&q=80" alt="Market" />
-                <span class="vendor-name">Fresh Market</span>
-                <button class="main-btn main-btn-outline">View Products</button>
-              </div>
-
-              <div class="vendor-item">
-                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=40&q=80" alt="Bakery" />
-                <span class="vendor-name">Artisan Bakery</span>
-                <button class="main-btn main-btn-outline">View Products</button>
-              </div>
-
-              <div class="vendor-item">
-                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=40&q=80" alt="Bakery" />
-                <span class="vendor-name">Artisan Bakery</span>
-                <button class="main-btn main-btn-outline">View Products</button>
-              </div>
-
-              <div class="vendor-item">
-                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=40&q=80" alt="Bakery" />
-                <span class="vendor-name">Artisan Bakery</span>
-                <button class="main-btn main-btn-outline">View Products</button>
-              </div>
-
-              <div class="vendor-item">
-                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=40&q=80" alt="Bakery" />
-                <span class="vendor-name">Artisan Bakery</span>
-                <button class="main-btn main-btn-outline">View Products</button>
-              </div>
-
-              <div class="vendor-item">
-                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=40&q=80" alt="Bakery" />
-                <span class="vendor-name">Artisan Bakery</span>
-                <button class="main-btn main-btn-outline">View Products</button>
-              </div>
-
-              <div class="vendor-item">
-                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=40&q=80" alt="Bakery" />
-                <span class="vendor-name">Artisan Bakery</span>
-                <button class="main-btn main-btn-outline">View Products</button>
-              </div>
-            </div>
-          </div>
-          <div class="card order-history">
-            <h4>Order History</h4>
-            <div class="order-history-item">
-              <span>Order #823761</span>
-              <span>$27.35</span>
-              <span>May 12, 2024</span>
-            </div>
-            <div class="order-history-item">
-              <span>Order #823762</span>
-              <span>$18.75</span>
-              <span>May 10, 2024</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="dashboard-row">
-          <div class="card featured-products">
-            <h4>Featured Products</h4>
-            <div class="product-list">
-              <div class="product-item">
-                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=60&q=80" alt="Tomatoes" />
-                <span class="product-name">Tomatoes</span>
-                <span class="product-price">$4.99</span>
-              </div>
-              <div class="product-item">
-                <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=60&q=80" alt="Steak" />
-                <span class="product-name">Ribeye Steak</span>
-                <span class="product-price">$19.99</span>
-              </div>
-              <div class="product-item">
-                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=60&q=80" alt="Kale" />
-                <span class="product-name">Organic Kale</span>
-                <span class="product-price">$3.49</span>
-              </div>
-            </div>
-          </div>
-          <div class="card manage-orders">
-            <h4>Manage Orders</h4>
-            <div class="manage-order-item">
-              <span>Order #823765</span>
-              <button class="main-btn main-btn-outline">Track Order</button>
-            </div>
-            <div class="manage-order-item">
-              <span>Order #823766</span>
-              <button class="main-btn main-btn-outline">Cancel Order</button>
-            </div>
-          </div>
-        </div> -->
         <!-- Nearby Vendors Section -->
         <div class="card vendors-map full-width">
           <h4>Nearby Vendors</h4>

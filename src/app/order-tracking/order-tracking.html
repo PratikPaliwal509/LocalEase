@@ -19,16 +19,46 @@
   <div class="dashboard-main">
     <!-- Sidebar -->
     <aside class="sidebar">
-      <ul>
-        <li class="active">Dashboard</li>
-        <li>Nearby Vendors</li>
-        <li>Deals</li>
-        <li>Top Rated</li>
-        <li>Recent Orders</li>
-        <li>Favorites</li>
-        <li>Settings</li>
-        <li>Help & Support</li>
-        <li>Logout</li>
+      <ul class="sidebar-menu">
+        <a href="buyer-dashboard"><li routerLink="/dashboard" routerLinkActive="active">
+          <i class="fas fa-home"></i><span>Dashboard</span>
+        </li></a>
+        <a href="/vendor-dashboard"><li routerLink="/vendor-dashboard" routerLinkActive="active">
+          <i class="fas fa-store"></i><span>Nearby Vendors</span>
+        </li></a>
+        <a href="/my-cart"><li routerLink="/cart" routerLinkActive="active">
+          <i class="fas fa-shopping-cart"></i><span>My Cart</span>
+        </li></a>
+        <a href="/my-order"><li routerLink="/orders" routerLinkActive="active">
+          <i class="fas fa-box"></i><span>My Orders</span>
+        </li></a>
+        <a href="/order-tracking"><li routerLink="/order-tracking" routerLinkActive="active">
+          <i class="fas fa-shipping-fast"></i><span>Track Delivery</span>
+        </li></a>
+        <a href="/favorites"><li routerLink="/favorites" routerLinkActive="active">
+          <i class="fas fa-heart"></i><span>Favorites</span>
+        </li></a>
+        <a href="/profile"><li routerLink="/profile" routerLinkActive="active">
+          <i class="fas fa-user"></i><span>Profile</span>
+        </li></a>
+        <!-- Offer section -->
+        <div class="offer-box">
+          <div class="offer-strip"></div>
+          <div class="offer-content">
+            <strong>New Offer Available!</strong>
+            <p>Get 15% off on your first order from nearby vendors.</p>
+          </div>
+        </div>
+        <!-- Footer section -->
+        <a href="/setting"><li routerLink="/settings" routerLinkActive="active">
+          <i class="fas fa-cog"></i><span>Settings</span>
+        </li></a>
+        <a href="/help-support"><li routerLink="/help" routerLinkActive="active">
+          <i class="fas fa-question-circle"></i><span>Help & Support</span>
+        </li></a>
+        <a href="/logout"><li routerLink="/logout" routerLinkActive="active">
+          <i class="fas fa-sign-out-alt"></i><span>Logout</span>
+        </li></a>
       </ul>
     </aside>
 
@@ -51,58 +81,82 @@
           </div>
           <img class="map-img" src="https://maps.googleapis.com/maps/api/staticmap?center=New+York,NY&zoom=14&size=400x180&key=YOUR_API_KEY" alt="Order Map" />
           <div class="delivery-progress">
-            <h5>Delivery Progress</h5>
-            <ul>
-              <li class="done"><strong>Order Confirmed</strong><br /><small>Today, 10:30 AM</small></li>
-              <li class="done"><strong>Order Prepared</strong><br /><small>Today, 11:15 AM</small></li>
-              <li class="active"><strong>Out for Delivery</strong><br /><small>Today, 11:45 AM</small></li>
-              <li class="active"><strong>Delivered</strong><br /><small>Delivered</small></li>
+            <div class="step-item completed">
+              <div class="icon">✅</div>
+              <div class="step-details">
+                <strong>Order Confirmed</strong>
+                <div class="time">Today, 10:30 AM</div>
+              </div>
+            </div>
+            <div class="step-item completed">
+              <div class="icon">✅</div>
+              <div class="step-details">
+                <strong>Order Prepared</strong>
+                <div class="time">Today, 11:15 AM</div>
+              </div>
+            </div>
+            <div class="step-item in-progress">
+              <div class="icon">🚚</div>
+              <div class="step-details">
+                <strong>Out for Delivery</strong>
+                <div class="time">Today, 11:45 AM</div>
+                <div class="status-text">In Progress</div>
+              </div>
+            </div>
+            <div class="step-item pending">
+              <div class="icon">⏳</div>
+              <div class="step-details">
+                <strong>Delivered</strong>
+                <div class="time">Estimated: Today, 2:45 PM</div>
+              </div>
+            </div>
+            <strong>Delivered</strong>
+            <div class="time">Estimated: Today, 2:45 PM</div>
+          </div>
+        </div>
+        <div class="right-column order-section">
+          <!-- Order Details Section -->
+          <div class="card order-details-section">
+            <h4>Order Details</h4>
+            <div class="order-details">
+              <div><b>Order #</b> 8177605</div>
+              <div><b>Placed:</b> May 21, 2024, 1:05 PM</div>
+              <div><b>Delivery Address:</b> 123 Main Street, NY</div>
+              <div><b>Buyer:</b> Michael</div>
+            </div>
+            <div class="contact-delivery">
+              <h5>Contact Delivery Person</h5>
+              <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Delivery Person" />
+              <b>Michael Rodriguez</b><br />
+              <div><span class="rating">⭐ 4.8</span></div>
+              <div class="contact-actions">
+                <button class="main-btn">Call</button>
+                <button class="main-btn main-btn-outline">Message</button>
+              </div>
+              <input class="message-input" type="text" placeholder="Type a custom message..." />
+            </div>
+          </div>
+          <!-- Order Summary Section -->
+          <div class="card order-summary-section">
+            <h5>Order Summary</h5>
+            <ul class="order-items">
+              <li><span>Whole Grain Bread</span><span>$4.5</span></li>
+              <li><span>Fresh Eggs</span><span>$3.2</span></li>
+              <li><span>Organic Kale</span><span>$2.9</span></li>
+              <li><span>Ribeye Steak</span><span>$18.0</span></li>
             </ul>
-            <div class="delivery-time">Estimated delivery: Today, 2:45 PM</div>
-          </div>
-        </div>
-        <div class="card order-details-section">
-          <h4>Order Details</h4>
-          <div class="order-details">
-            <div><b>Order #</b> 8177605</div>
-            <div><b>Placed:</b> May 21, 2024, 1:05 PM</div>
-            <div><b>Delivery Address:</b> 123 Main Street, NY</div>
-            <div><b>Buyer:</b> Michael</div>
-          </div>
-          <div class="contact-delivery">
-            <h5>Contact Delivery Person</h5>
-            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Delivery Person" />
-            <b>Michael Rodriguez</b><br />
-            <div>  
-              <span class="rating">⭐ 4.8</span>
+            <div class="order-total">
+              <span>Subtotal</span><span>$28.6</span>
             </div>
-            <div class="contact-actions">
-              <button class="main-btn">Call</button>
-              <button class="main-btn main-btn-outline">Message</button>
+            <div class="order-total">
+              <span>Delivery Fee</span><span>$3.99</span>
             </div>
-            <input class="message-input" type="text" placeholder="Type a custom message..." />
-          </div>
-        </div>
-        <div class="card order-summary-section">
-          <h5>Order Summary</h5>
-          <ul class="order-items">
-            <li><span>Whole Grain Bread</span><span>$4.5</span></li>
-            <li><span>Fresh Eggs</span><span>$3.2</span></li>
-            <li><span>Organic Kale</span><span>$2.9</span></li>
-            <li><span>Ribeye Steak</span><span>$18.0</span></li>
-          </ul>
-          <div class="order-total">
-            <span>Subtotal</span>
-            <span>$28.6</span>
-          </div>
-          <div class="order-total">
-            <span>Delivery Fee</span><span>$3.99</span>
-          </div>
-          <div class="order-total">
-            <span>Tax</span><span>$2.45</span>
-          </div>
-          <div class="order-total final-total">
-            <span>Total</span><span>$32.93</span>
+            <div class="order-total">
+              <span>Tax</span><span>$2.45</span>
+            </div>
+            <div class="order-total final-total">
+              <span>Total</span><span>$32.93</span>
+            </div>
           </div>
         </div>
       </div>

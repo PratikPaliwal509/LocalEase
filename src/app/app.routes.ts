@@ -16,7 +16,7 @@ import { OrderManagementComponent } from './order-mang/order-management.componen
 import { ProductPageComponent } from './product/product-page.component';
 import { OrderComponent } from './order/order.component';
 import { ReturnsRefundsComponent } from './return-refunds/returns-refunds.component';
-import { SettingsComponent } from './settings/settings.component';
+// import { SettingsComponent } from './settings/settings.component';
 export const routes: Routes = [
   { path: '', component: LandingPage },
   { path: 'login', component: LoginSignup },
@@ -35,5 +35,5 @@ export const routes: Routes = [
   { path: 'product', component: ProductPageComponent },
   { path: 'order', component: OrderComponent },
   { path: 'return-refunds', component: ReturnsRefundsComponent },
-  { path: 'setting', component: SettingsComponent },
+  // { path: 'setting', component: SettingsComponent },
 ];

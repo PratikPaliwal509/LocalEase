@@ -68,7 +68,15 @@
       <div class="top-bar">
         <h2 class="dashboard-title">Vendor Dashboard</h2>
         <div class="actions-row">
-          <button class="main-btn">Add New Product</button>
+          <!-- <button class="main-btn">Add New Product</button> -->
+           <button (click)="openProductForm()">Add New Product</button>
+
+<app-product-form
+  *ngIf="showProductForm"
+  (productAdded)="handleProductAdd($event)"
+  (closed)="showProductForm = false">
+</app-product-form>
+
           <button class="main-btn main-btn-outline">Export Data</button>
         </div>
       </div>

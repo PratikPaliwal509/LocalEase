@@ -15,11 +15,11 @@ import { OrderManagementComponent } from './order-mang/order-management.componen
 import { ProductPageComponent } from './product/product-page.component';
 import { OrderComponent } from './order/order.component';
 import { ReturnsRefundsComponent } from './return-refunds/returns-refunds.component';
-import { SettingsComponent } from './settings/settings.component';
+// import { SettingsComponent } from './settings/settings.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, LoginSignup, LandingPage, BuyerDashboard, VendorDashboard, OrderTracking, ProfileComponent, CartComponent, MyOrdersComponent, FavoritesComponent, UserManagementComponent, VendorManagementComponent, OrderManagementComponent, ProductPageComponent, OrderComponent, ReturnsRefundsComponent, SettingsComponent ],
+  imports: [RouterOutlet, LoginSignup, LandingPage, BuyerDashboard, VendorDashboard, OrderTracking, ProfileComponent, CartComponent, MyOrdersComponent, FavoritesComponent, UserManagementComponent, VendorManagementComponent, OrderManagementComponent, ProductPageComponent, OrderComponent, ReturnsRefundsComponent ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

@@ -1,0 +1,23 @@
+<div class="modal-backdrop" *ngIf="isVisible">
+  <div class="modal-container">
+    <h2>Add New Product</h2>
+    <br (ngSubmit)="onSubmit()" #productForm="ngForm">
+      <label>Product Name:</label>
+      <input type="text" name="name" [(ngModel)]="product.name" required /><br/>
+      <label>Product image:</label>
+      <input type="file" name="image" [(ngModel)]="product.image" required />
+
+      <label>Price:</label>
+      <input type="number" name="price" [(ngModel)]="product.price" required /><br/>
+
+      <label>Category:</label>
+      <input type="text" name="category" [(ngModel)]="product.category" /><br/>
+
+      <label>Description:</label>
+      <textarea name="description" [(ngModel)]="product.description"></textarea><br/>
+
+      <button type="submit" [disabled]="!productForm.form.valid">Add Product</button>
+      <button type="button" (click)="close()">Cancel</button>
+    </form>
+  </div>
+</div>

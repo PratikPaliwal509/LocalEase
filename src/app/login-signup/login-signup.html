@@ -9,39 +9,41 @@
     </div>
     <h3>Welcome to your local marketplace</h3>
     <p class="subtitle">Connect with local vendors and find fresh products</p>
-    <div class="tab-switch">
-      <button [class.active]="activeTab === 'signin'" (click)="setTab('signin')">Sign In</button>
-      <button [class.active]="activeTab === 'signup'" (click)="setTab('signup')">Sign Up</button>
+    <div class="form">
+      <div class="tab-switch">
+        <button [class.active]="activeTab === 'signin'" (click)="setTab('signin')">Sign In</button>
+        <button [class.active]="activeTab === 'signup'" (click)="setTab('signup')">Sign Up</button>
+      </div>
+      <div class="role-switch">
+        <button [class.selected]="selectedRole === 'buyer'" (click)="setRole('buyer')">Buyer</button>
+        <button [class.selected]="selectedRole === 'vendor'" (click)="setRole('vendor')">Vendor</button>
+        <!-- <button *ngIf="activeTab === 'signin'" [class.selected]="selectedRole === 'admin'" (click)="setRole('admin')">Admin</button> -->
+      </div>
+      <form (ngSubmit)="handleSubmit()">
+        <div *ngIf="activeTab == 'signup'" class="input-group">
+          <label>Full Name</label>
+          <input type="text" placeholder="Enter Your Full Name" [(ngModel)]="name" name="name" required />
+        </div>
+        <div class="input-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="your@email.com" [(ngModel)]="email" name="email" required />
+        </div>
+        <div  *ngIf="activeTab == 'signup'" class="input-group">
+          <label>Mobile Number</label>
+          <input type="number" placeholder="Enter Your Mobile Number" [(ngModel)]="number" name="number" required />
+        </div>
+        <div class="input-group">
+          <label>Password</label>
+          <input type="password" placeholder="********" [(ngModel)]="password" name="password" required />
+        </div>
+        <div *ngIf="activeTab == 'signup'" class="input-group">
+          <label>Confirm Password</label>
+          <input type="password" placeholder="Confirm password" [(ngModel)]="confirmPassword" name="confirmPassword" required />
+        </div>
+        <!-- submit button -->
+        <button class="main-btn" type="submit">{{ activeTab === 'signin' ? 'Sign In' : 'Sign Up' }}</button>
+      </form>
     </div>
-    <div class="role-switch">
-      <button [class.selected]="selectedRole === 'buyer'" (click)="setRole('buyer')">Buyer</button>
-      <button [class.selected]="selectedRole === 'vendor'" (click)="setRole('vendor')">Vendor</button>
-      <!-- <button *ngIf="activeTab === 'signin'" [class.selected]="selectedRole === 'admin'" (click)="setRole('admin')">Admin</button> -->
-    </div>
-    <form (ngSubmit)="handleSubmit()">
-  <div *ngIf="activeTab == 'signup'" class="input-group">
-    <label>Full Name</label>
-    <input type="text" placeholder="Enter Your Full Name" [(ngModel)]="name" name="name" required />
-  </div>
-  <div class="input-group">
-    <label>Email Address</label>
-    <input type="email" placeholder="your@email.com" [(ngModel)]="email" name="email" required />
-  </div>
-  <div  *ngIf="activeTab == 'signup'" class="input-group">
-    <label>Mobile Number</label>
-    <input type="number" placeholder="Enter Your Mobile Number" [(ngModel)]="number" name="number" required />
-  </div>
-  <div class="input-group">
-    <label>Password</label>
-    <input type="password" placeholder="********" [(ngModel)]="password" name="password" required />
-  </div>
-  <div *ngIf="activeTab == 'signup'" class="input-group">
-    <label>Confirm Password</label>
-    <input type="password" placeholder="Confirm password" [(ngModel)]="confirmPassword" name="confirmPassword" required />
-  </div>
-  <!-- submit button -->
-  <button class="main-btn" type="submit">{{ activeTab === 'signin' ? 'Sign In' : 'Sign Up' }}</button>
-</form>
 
     <div class="terms-row">
       <span *ngIf="activeTab == 'signin'">By signing in, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></span>

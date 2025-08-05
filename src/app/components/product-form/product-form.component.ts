@@ -19,8 +19,16 @@ export class ProductFormComponent {
     name: '',
     price: null,
     category: '',
-    description: ''
+    description: '',
+    image: null
   };
+
+  onFileSelected(event: any) {
+    const file = event.target.files[0];
+    if (file) {
+      this.product.image = file;
+    }
+  }
 
   open() {
     this.isVisible = true;
@@ -34,6 +42,6 @@ export class ProductFormComponent {
   onSubmit() {
     this.productAdded.emit(this.product);
     this.close();
-    this.product = { name: '', price: null, category: '', description: '' };
+    this.product = { name: '', price: null, category: '', description: '',image: null };
   }
 }

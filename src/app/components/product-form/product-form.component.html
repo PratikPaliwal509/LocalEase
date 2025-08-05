@@ -1,11 +1,12 @@
 <div class="modal-backdrop" *ngIf="isVisible">
   <div class="modal-container">
     <h2>Add New Product</h2>
-    <br (ngSubmit)="onSubmit()" #productForm="ngForm">
+    <form (ngSubmit)="onSubmit()" #productForm="ngForm">
       <label>Product Name:</label>
       <input type="text" name="name" [(ngModel)]="product.name" required /><br/>
+      
       <label>Product image:</label>
-      <input type="file" name="image" [(ngModel)]="product.image" required />
+      <input type="file" name="image" (change)="onFileSelected($event)" required />
 
       <label>Price:</label>
       <input type="number" name="price" [(ngModel)]="product.price" required /><br/>

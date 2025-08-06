@@ -15,32 +15,51 @@
       <button class="nav-btn nav-btn-primary">Admin Panel</button>
       <button class="nav-btn">Order Tracking</button>
     </div>
+    <div class="navbar-options">
+      <ul>
+        <a href="product"><li routerLink="/product" routerLinkActive="active">
+          <span>Products</span>
+        </li></a>
+        <a href="order"><li routerLink="/orders" routerLinkActive="active">
+          <span>Orders</span>
+        </li></a>
+        <a href="analytics"><li routerLink="/analytics" routerLinkActive="active">
+          <span>Analytics</span>
+        </li></a>
+        <a href="reviews"><li routerLink="/reviews" routerLinkActive="active">
+          <span>Reviews</span>
+        </li></a>
+      </ul>
+    </div>
   </nav>
 
   <div class="dashboard-main">
     <!-- Sidebar -->
     <aside class="sidebar">
       <ul class="sidebar-menu">
-        <a href="buyer-dashboard"><li routerLink="/dashboard" routerLinkActive="active">
-          <i class="fas fa-home"></i><span>Dashboard</span>
-        </li></a>
         <a href="vendor-dashboard"><li routerLink="/vendor-dashboard" routerLinkActive="active">
-          <i class="fas fa-store"></i><span>Nearby Vendors</span>
+          <i class="fas fa-store"></i><span>Dashboard</span>
         </li></a>
-        <a href="my-cart"><li routerLink="/cart" routerLinkActive="active">
-          <i class="fas fa-shopping-cart"></i><span>My Cart</span>
+        <a href="product"><li routerLink="/product" routerLinkActive="active">
+          <i class="fas fa-box-open"></i><span>Products</span>
         </li></a>
-        <a href="my-order"><li routerLink="/orders" routerLinkActive="active">
-          <i class="fas fa-box"></i><span>My Orders</span>
+        <a href="order"><li routerLink="/orders" routerLinkActive="active">
+          <i class="fas fa-shopping-bag"></i><span>Orders</span>
         </li></a>
-        <a href="order-tracking"><li routerLink="/order-tracking" routerLinkActive="active">
-          <i class="fas fa-shipping-fast"></i><span>Track Delivery</span>
+        <a href="analytics"><li routerLink="/analytics" routerLinkActive="active">
+          <i class="fas fa-shipping-fast"></i><span>Analytics</span>
         </li></a>
-        <a href="favorites"><li routerLink="/favorites" routerLinkActive="active">
-          <i class="fas fa-heart"></i><span>Favorites</span>
+        <a href="reviews"><li routerLink="/reviews" routerLinkActive="active">
+          <i class="fas fa-star"></i><span>Reviews</span>
         </li></a>
-        <a href="profile"><li routerLink="/profile" routerLinkActive="active">
-          <i class="fas fa-user"></i><span>Profile</span>
+        <a href="return-refunds"><li routerLink="/returns & refunds" routerLinkActive="active">
+          <i class="fas fa-arrow-left"></i><span>Returns & Refunds</span>
+        </li></a>
+        <a href="/Image-gallery"><li routerLink="/image-gallery" routerLinkActive="active">
+          <i class="fas fa-image"></i><span>Image-Gallery</span>
+        </li></a>
+        <a href="/setting"><li routerLink="/settings" routerLinkActive="active">
+          <i class="fas fa-cog"></i><span>Settings</span>
         </li></a>
         <!-- Offer section -->
         <div class="offer-box">
@@ -51,9 +70,6 @@
           </div>
         </div>
         <!-- Footer section -->
-        <a href="/setting"><li routerLink="/settings" routerLinkActive="active">
-          <i class="fas fa-cog"></i><span>Settings</span>
-        </li></a>
         <a href="/help-support"><li routerLink="/help" routerLinkActive="active">
           <i class="fas fa-question-circle"></i><span>Help & Support</span>
         </li></a>
@@ -71,11 +87,11 @@
           <!-- <button class="main-btn">Add New Product</button> -->
            <button class="main-btn main-btn-outline" (click)="openProductForm()">Add New Product</button>
 
-<app-product-form
-  *ngIf="showProductForm"
-  (productAdded)="handleProductAdd($event)"
-  (closed)="showProductForm = false">
-</app-product-form>
+            <app-product-form
+              *ngIf="showProductForm"
+              (productAdded)="handleProductAdd($event)"
+              (closed)="showProductForm = false">
+            </app-product-form>
 
           <button class="main-btn main-btn-outline">Export Data</button>
         </div>

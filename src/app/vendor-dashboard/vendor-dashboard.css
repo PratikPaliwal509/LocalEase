@@ -83,9 +83,12 @@ a{
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 16px;
+  padding: 5px 20px;
+  border-radius: 8px;
 }
 .navbar-options ul li:hover {
-  color: white; 
+  background-color: white; 
+  color: #ff6b3d;
 }
 .dashboard-main {
   display: flex;
@@ -143,6 +146,7 @@ a{
 .sidebar ul li:hover {
   background: #ff6b3d;
   color: #fff;
+  border-radius: 10px;
 }
 .sidebar ul li.active i,
 .sidebar ul li:hover i {

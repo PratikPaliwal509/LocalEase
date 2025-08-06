@@ -83,9 +83,13 @@ a {
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 16px;
+  margin: 2px;
+  padding: 5px;
+  border-radius: 8px;
 }
 .navbar-options ul li:hover {
-  color: white; 
+  background-color: white; 
+  color: #ff6b3d;
 }
 .dashboard-main {
   display: flex;

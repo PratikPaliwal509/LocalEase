@@ -1,9 +1,10 @@
 .login-signup-container {
   display: flex;
-  min-height: 100vh;
+  height: 100vh;
   background: #f7f7f7;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .image-section {
@@ -14,9 +15,9 @@
   align-items: center;
   justify-content: center;
   margin: 0 5px;
-  background: #eaeaea;
   height: 100vh;
   overflow: hidden;
+  padding: 2%;
 }
 .image-section img {
   width: 100%;
@@ -24,14 +25,15 @@
   object-fit: cover;
   object-position: center;
   border-radius: 6px;
+  background-color: #eaeaea;
 }
 
 .form-section {
   flex: 1;
   max-width: 420px;
   min-width: 320px;
-  margin: auto;
-  padding: 2.5rem;
+  margin: .5rem 5rem 1rem 10rem;
+  padding: 2%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -72,7 +74,7 @@
   justify-content: center;
   background: #fff;
   box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-  padding: 2.5rem 2rem 2rem 2rem;
+  padding: 2.5rem 2rem;
   height: 75vh;
   max-width: 420px;
   min-width: 320px;

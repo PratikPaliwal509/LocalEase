@@ -83,8 +83,7 @@ a {
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 16px;
-  margin: 2px;
-  padding: 5px;
+  padding: 5px 20px;
   border-radius: 8px;
 }
 .navbar-options ul li:hover {
@@ -140,6 +139,7 @@ a {
 .sidebar ul li:hover {
   background: #ff6b3d;
   color: #fff;
+  border-radius: 10px;
 }
 .sidebar ul li.active i,
 .sidebar ul li:hover i {

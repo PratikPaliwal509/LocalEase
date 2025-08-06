@@ -10,6 +10,7 @@ a{
 /* Top Navbar */
 .dashboard-navbar {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   background: #ff6b3d;
@@ -34,7 +35,7 @@ a{
   padding: 0.5rem 1rem;
   border-radius: 8px;
   border: 1px solid #eee;
-  min-width: 220px;
+  min-width: 60%;
   font-size: 1rem;
   background: #fff;
   color: #222;
@@ -62,29 +63,49 @@ a{
   background: #e65a2d;
   color: #fff;
 }
-
+.navbar-options {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  padding: 10px 0;
+  margin-top: 10px;
+}
+.navbar-options ul {
+  list-style: none;
+  display: flex;
+  gap: 40px; 
+  margin: 0;
+  padding: 0;
+}
+.navbar-options ul li {
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+.navbar-options ul li:hover {
+  color: white; 
+}
 .dashboard-main {
   display: flex;
   align-items: flex-start;
-  gap: 2rem;
-  padding: 2rem 2vw;
+  gap: 2.5rem;
 }
 
 /* Sidebar */
 .sidebar {
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  padding: 2rem 1.2rem;
+  border-radius: 0 0 10px 5px;
+  padding: 2rem 1rem;
   min-width: 200px;
   max-width: 240px;
-  flex: 0 0 220px;
+  flex: 0 0 225px;
   display: flex;
   flex-direction: column;
-  height: 89vh;
+  height: 88vh;
   position: sticky;
-  top: 0;
-  border-right: 1px solid #eee;
+  top: 8rem;
+  background-color: #cdcbcb;
 }
 /* Sidebar List */
 .sidebar ul {
@@ -93,24 +114,22 @@ a{
   margin: 0;
 }
 /* List Items */
-.sidebar a {
+/* .sidebar a {
   text-decoration: none;
   color: inherit;
 }
 .sidebar a:focus {
   outline: none;
-}
+} */
 .sidebar ul li {
   display: flex;
   align-items: center;
   gap: 0.75rem;
   padding: 0.7rem 1rem;
-  border-radius: 8px;
   color: #444;
   font-weight: 500;
   margin-bottom: 0.3rem;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
   white-space: nowrap;
 }
 /* Icons */
@@ -169,6 +188,7 @@ a{
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  padding: 2rem 2vw 2rem 0;
 }
 .stats-row {
   display: flex;

@@ -13,20 +13,21 @@
     <div class="navbar-actions">
       <button class="nav-btn">View Store</button>
       <button class="nav-btn nav-btn-primary">Admin Panel</button>
-      <button class="nav-btn">Order Tracking</button>
+      <button class="nav-btn">Order-tracking</button>
+      <!-- <button class="nav-btn" routerLink="/order-tracking" routerLinkActive="active"><a href="/order-tracking"></a><span> Tracking</span></button> -->
     </div>
     <div class="navbar-options">
       <ul>
-        <a href="product"><li routerLink="/product" routerLinkActive="active">
+        <a href="/product"><li routerLink="/product" routerLinkActive="active">
           <span>Products</span>
         </li></a>
-        <a href="order"><li routerLink="/orders" routerLinkActive="active">
+        <a href="/order"><li routerLink="/orders" routerLinkActive="active">
           <span>Orders</span>
         </li></a>
-        <a href="analytics"><li routerLink="/analytics" routerLinkActive="active">
+        <a href="/analytics"><li routerLink="/analytics" routerLinkActive="active">
           <span>Analytics</span>
         </li></a>
-        <a href="reviews"><li routerLink="/reviews" routerLinkActive="active">
+        <a href="/reviews"><li routerLink="/reviews" routerLinkActive="active">
           <span>Reviews</span>
         </li></a>
       </ul>
@@ -84,14 +85,46 @@
       <div class="top-bar">
         <h2 class="dashboard-title">Vendor Dashboard</h2>
         <div class="actions-row">
-          <!-- <button class="main-btn">Add New Product</button> -->
-           <button class="main-btn main-btn-outline" (click)="openProductForm()">Add New Product</button>
+          <button class="main-btn main-btn-outline" (click)="openProductForm()">Add New Product</button>
 
             <app-product-form
               *ngIf="showProductForm"
               (productAdded)="handleProductAdd($event)"
               (closed)="showProductForm = false">
             </app-product-form>
+            <!-- <div class="modal-backdrop">
+              <div class="modal-container">
+                <h2>Add New Product</h2>
+                <form (ngSubmit)="productForm()" #productForm="ngForm">
+                  <label>
+                    Product Name:
+                    <input type="text" [(ngModel)]="product.name" name="name" required />
+                  </label>
+                  <label>
+                    Product Image:
+                    <input type="file" (change)="onImageSelected($event)" />
+                  </label>
+                  <label>
+                    Price:
+                    <input type="number" [(ngModel)]="product.price" name="price" required />
+                  </label>
+                  <label>
+                    Category:
+                    <input type="text" [(ngModel)]="product.category" name="category" />
+                  </label>
+                  <label>
+                    Description:
+                    <textarea [(ngModel)]="product.description" name="description"></textarea>
+                  </label>
+
+                  <div class="form-actions">
+                    <button type="submit">Add Product</button>
+                    <button type="button" (click)="closeForm()">Cancel</button>
+                  </div>
+                </form>
+              </div>
+            </div> -->
+
 
           <button class="main-btn main-btn-outline">Export Data</button>
         </div>

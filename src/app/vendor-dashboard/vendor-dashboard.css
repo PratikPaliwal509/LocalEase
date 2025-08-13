@@ -187,6 +187,7 @@ a{
 }
 
 /* Dashboard Content */
+
 .dashboard-content {
   flex: 1 1 0;
   display: flex;

@@ -20,41 +20,38 @@
     <!-- Sidebar -->
     <aside class="sidebar">
       <ul class="sidebar-menu">
-        <a href="/admin-dashboard"><li routerLink="/dashboard" routerLinkActive="active">
-          <i class="fas fa-home"></i><span>Dashboard</span>
+        <a href="admin-dashboard"><li routerLink="/admin-dashboard" routerLinkActive="active">
+          <i class="fas fa-store"></i><span>Dashboard</span>
         </li></a>
-        <a href="/vendor-dashboard"><li routerLink="/vendor-dashboard" routerLinkActive="active">
-          <i class="fas fa-store"></i><span>Nearby Vendors</span>
+        <p>Management</p>
+        <a href="user-mang"><li routerLink="/user-mang" routerLinkActive="active">
+          <i class="fas fa-users"></i><span>User Management</span>
         </li></a>
-        <a href="/my-cart"><li routerLink="/cart" routerLinkActive="active">
-          <i class="fas fa-shopping-cart"></i><span>My Cart</span>
+        <a href="vendor-mang"><li routerLink="/vendor-mang" routerLinkActive="active">
+          <i class="fas fa-home"></i><span>Vendor Management</span>
         </li></a>
-        <a href="/my-order"><li routerLink="/orders" routerLinkActive="active">
-          <i class="fas fa-box"></i><span>My Orders</span>
+        <a href="approval-req"><li routerLink="/approval-req" routerLinkActive="active">
+          <i class="fas fa-shipping-fast"></i><span>Approval Requests</span>
         </li></a>
-        <a href="/order-tracking"><li routerLink="/order-tracking" routerLinkActive="active">
-          <i class="fas fa-shipping-fast"></i><span>Track Delivery</span>
+        <p>Monitoring</p>
+        <a href="order"><li routerLink="/order" routerLinkActive="active">
+          <i class="fas fa-shopping-cart"></i><span>Orders</span>
         </li></a>
-        <a href="/favorites"><li routerLink="/favorites" routerLinkActive="active">
-          <i class="fas fa-heart"></i><span>Favorites</span>
+        <a href="complaints"><li routerLink="/complaints" routerLinkActive="active">
+          <i class="fas fa-arrow-left"></i><span>Complaints</span>
         </li></a>
-        <a href="/profile"><li routerLink="/profile" routerLinkActive="active">
-          <i class="fas fa-user"></i><span>Profile</span>
+        <a href="/analytics"><li routerLink="/analytics" routerLinkActive="active">
+          <i class="fas fa-image"></i><span>Analytics</span>
         </li></a>
-        <!-- Offer section -->
-        <div class="offer-box">
-          <div class="offer-strip"></div>
-          <div class="offer-content">
-            <strong>New Offer Available!</strong>
-            <p>Get 15% off on your first order from nearby vendors.</p>
-          </div>
-        </div>
-        <!-- Footer section -->
+        <p>System</p>
         <a href="/setting"><li routerLink="/settings" routerLinkActive="active">
           <i class="fas fa-cog"></i><span>Settings</span>
         </li></a>
-        <a href="/help-support"><li routerLink="/help" routerLinkActive="active">
-          <i class="fas fa-question-circle"></i><span>Help & Support</span>
+        <a href="/report"><li routerLink="/report" routerLinkActive="active">
+          <i class="fas fa-question-circle"></i><span>Reports</span>
+        </li></a>
+        <a href="/notification"><li routerLink="/notification" routerLinkActive="active">
+          <i class="fas fa-bell"></i><span>Notification</span>
         </li></a>
         <a href="/logout"><li routerLink="/logout" routerLinkActive="active">
           <i class="fas fa-sign-out-alt"></i><span>Logout</span>
@@ -64,31 +61,41 @@
 
     <!-- Main Content -->
     <section class="dashboard-content">
+      <div class="top-bar">
+        <h2 class="dashboard-title">Admin Dashboard</h2>
+        <p>Welcome back, Admin! Here's what happening today...</p>
+      </div>
       <div class="dashboard-row stats-row">
         <div class="stat-card">
           <div class="stat-title">Total Revenue</div>
           <div class="stat-value">$24,589.32</div>
+          <div class="stat-sub">+8.2% from last month</div>
         </div>
         <div class="stat-card">
           <div class="stat-title">Active Users</div>
           <div class="stat-value">8,342</div>
+          <div class="stat-sub">+8.2% from last month</div>
         </div>
         <div class="stat-card">
           <div class="stat-title">Active Vendors</div>
           <div class="stat-value">1,247</div>
+          <div class="stat-sub">+8.2% from last month</div>
         </div>
         <div class="stat-card">
           <div class="stat-title">Pending Approvals</div>
           <div class="stat-value">12</div>
+          <div class="stat-sub">+8.2% from last month</div>
         </div>
       </div>
 
       <div class="dashboard-row charts-row">
         <div class="card revenue-overview">
-          <h4>Revenue Overview</h4>
-          <div class="revenue-tabs">
-            <button class="tab-btn active">Monthly</button>
-            <button class="tab-btn">Weekly</button>
+          <div class="revenue-overview-header">
+            <h4>Revenue Overview</h4>
+            <div class="revenue-tabs">
+              <button class="tab-btn active">Monthly</button>
+              <button class="tab-btn">Weekly</button>
+            </div>
           </div>
           <div class="revenue-chart">
             <!-- Placeholder for chart -->
@@ -100,41 +107,128 @@
           <div class="pie-chart-placeholder">[Pie Chart]</div>
         </div>
       </div>
-
+      
       <div class="dashboard-row vendor-registrations-row">
         <div class="card vendor-registrations">
-          <h4>Recent Vendor Registrations</h4>
+          <div class="card-header">
+            <h4>Recent Vendor Registrations</h4>
+            <a href="#">View All</a>
+          </div>
           <div class="vendor-list">
             <div class="vendor-item">
-              <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Vendor" />
-              <span>Fresh Farm</span>
-              <span class="vendor-time">2 hours ago</span>
-              <button class="main-btn main-btn-outline">Approve</button>
+              <div class="vendor-info">
+                <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Vendor" />
+                <div class="vendor-details">
+                  <span>Fresh Harvest</span>
+                  <span>Grocery Store</span>
+                </div>
+              </div>
+              <div class="vendor-actions">
+                <button class="main-btn main-btn-outline">Approve</button>
+                <button class="main-btn main-btn-outline">Reject</button>
+              </div>
             </div>
             <div class="vendor-item">
-              <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Vendor" />
-              <span>Urban Organics</span>
-              <span class="vendor-time">5 hours ago</span>
-              <button class="main-btn main-btn-outline">Approve</button>
+              <div class="vendor-info">
+                <img src="https://randomuser.me/api/portraits/women/40.jpg" alt="Vendor" />
+                <div class="vendor-details">
+                  <span>Fresh Harvest</span>
+                  <span>Grocery Store</span>
+                </div>
+              </div>
+              <div class="vendor-actions">
+                <button class="main-btn main-btn-outline">Approve</button>
+                <button class="main-btn main-btn-outline">Reject</button>
+              </div>
             </div>
             <div class="vendor-item">
-              <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Vendor" />
-              <span>Artisan Bakery</span>
-              <span class="vendor-time">8 hours ago</span>
-              <button class="main-btn main-btn-outline">Approve</button>
+              <div class="vendor-info">
+                <img src="https://randomuser.me/api/portraits/men/53.jpg" alt="Vendor" />
+                <div class="vendor-details">
+                  <span>Fresh Harvest</span>
+                  <span>Grocery Store</span>
+                </div>
+              </div>
+              <div class="vendor-actions">
+                <button class="main-btn main-btn-outline">Approve</button>
+                <button class="main-btn main-btn-outline">Reject</button>
+              </div>
+            </div>
+            <div class="vendor-item">
+              <div class="vendor-info">
+                <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Vendor" />
+                <div class="vendor-details">
+                  <span>Fresh Harvest</span>
+                  <span>Grocery Store</span>
+                </div>
+              </div>
+              <div class="vendor-actions">
+                <button class="main-btn main-btn-outline">Approve</button>
+                <button class="main-btn main-btn-outline">Reject</button>
+              </div>
             </div>
           </div>
         </div>
-        <div class="card recent-activity">
-          <h4>Recent Activity</h4>
-          <ul class="activity-list">
-            <li>Vendor <b>Fresh Farm</b> approved</li>
-            <li>Order #823761 delivered</li>
-            <li>User <b>Michael</b> registered</li>
-            <li>Vendor <b>Urban Organics</b> pending approval</li>
-          </ul>
+
+        <div class="card recent-complaints">
+          <div class="card-header">
+            <h4>Recent Complaints</h4>
+            <a href="#">View All</a>
+          </div>
+          <div class="complaint-item">
+            <div class="complaint-text">
+              <strong>Delayed Delivery</strong>
+              <p>Order #45678 was delayed by more than 2 hours</p>
+              <div class="complaint-meta">
+                <img src="https://randomuser.me/api/portraits/women/67.jpg" alt="Sarah Johnson">
+                <span>Sarah Johnson</span>
+                <span class="time">2 hours ago</span>
+              </div>
+            </div>
+            <span class="status pending">Pending</span>
+          </div>
+
+          <div class="complaint-item">
+            <div class="complaint-text">
+              <strong>Wrong Item Received</strong>
+              <p>Customer received incorrect product for order #78901</p>
+              <div class="complaint-meta">
+                <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Michael Thompson">
+                <span>Michael Thompson</span>
+                <span class="time">5 hours ago</span>
+              </div>
+            </div>
+            <span class="status urgent">Urgent</span>
+          </div>
+
+          <div class="complaint-item">
+            <div class="complaint-text">
+              <strong>Vendor Behavior</strong>
+              <p>Complaint about vendor attitude during delivery</p>
+              <div class="complaint-meta">
+                <img src="https://randomuser.me/api/portraits/men/50.jpg" alt="David Wilson">
+                <span>David Wilson</span>
+                <span class="time">1 day ago</span>
+              </div>
+            </div>
+            <span class="status resolved">Resolved</span>
+          </div>
+
+          <div class="complaint-item">
+            <div class="complaint-text">
+              <strong>Payment Issue</strong>
+              <p>Double charge on order #56789</p>
+              <div class="complaint-meta">
+                <img src="https://randomuser.me/api/portraits/women/5.jpg" alt="Patricia Garcia">
+                <span>Patricia Garcia</span>
+                <span class="time">2 days ago</span>
+              </div>
+            </div>
+            <span class="status pending">Pending</span>
+          </div>
         </div>
       </div>
+
     </section>
   </div>
 </div>

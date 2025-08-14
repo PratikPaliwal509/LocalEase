@@ -220,7 +220,7 @@ p{
   align-items: center;
   justify-content: space-between;
 }
-.revenue-overview-header h4{
+.revenue-overview-header h4, .card.user-utilization h4{
   margin: 0;
   color: #ff6b3d;
   font-size: 1.15rem;
@@ -230,12 +230,8 @@ p{
 .card.revenue-overview > .revenue-tabs {
   margin: 0;
 }
-.card.user-utilization {
+.card.user-utilization{
   flex: 1; 
-  margin: 0;
-  color: #ff6b3d;
-  font-size: 1.15rem;
-  font-weight: 700;
 }
 .revenue-tabs {
   margin-left: 0; /* push to right */

@@ -222,7 +222,7 @@ p{
 }
 .revenue-overview-header h4, .card.user-utilization h4{
   margin: 0;
-  color: #ff6b3d;
+  color: #333;
   font-size: 1.15rem;
   font-weight: 700;
 }
@@ -279,6 +279,7 @@ p{
   padding: 1.2rem 1.5rem;
   flex: 1 1 350px;
   min-width: 300px;
+  max-height: 555px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -302,6 +303,7 @@ p{
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
+  overflow: hidden;
 }
 .vendor-item {
   display: flex;
